@@ -2,23 +2,23 @@
 
 @font-face {
     font-family: "iamono";
-    src: url("./iamono.ttf") format("truetype");
+    src: url("iamono.ttf") format("truetype");
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("../fonts/iaquattro.woff2") format("woff2");
+    src: url("iaquattro.woff2") format("woff2");
     font-weight: 400;
     font-feature-settings: "ss04"; /* běžná nula */
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("../fonts/iaquattro_bold.woff2") format("woff2");
+    src: url("iaquattro_bold.woff2") format("woff2");
     font-weight: 700;
     font-feature-settings: "ss04"; /* běžná nula */
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("../fonts/iaquattro_italic.woff2") format("woff2");
+    src: url("iaquattro_italic.woff2") format("woff2");
     font-style: italic;
     font-feature-settings: "ss04"; /* běžná nula */
 }
@@ -291,7 +291,8 @@ small,
     line-height: calc(var(--baseline) * 0.85);
 }
 
-s, .strike {
+s,
+.strike {
     text-decoration: line-through;
 }
 
