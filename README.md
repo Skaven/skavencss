@@ -1,2 +1,3 @@
-# skavencss
-Skaven CSS framework
+# Skaven CSS
+
+CSS framework pro naše fantazácké projekty.
