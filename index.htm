@@ -158,8 +158,9 @@
                     </table>
 
                     <p>
-                        Pokud chceš nadpis s podnadpisem, obal <code>h1</code> a
-                        <code>h2</code> do tagu <code>&lt;hgroup&gt;</code>.
+                        Pokud chceš nadpis s podnadpisem, obal
+                        <code>h1</code> a <code>h2</code> do tagu
+                        <code>&lt;hgroup&gt;</code>.
                     </p>
                 </section>
 
@@ -171,10 +172,10 @@
                     <p class="readable">
                         Odstavec není třeba stylovat žádnou třídou, je rovnou
                         zarovnaný na grid a má spodní margin ve výšce jednoho
-                        řádku. Přidáním třídy <code>.readable</code> se omezí
-                        maximální délka odstavce na 75 znaků. (Z různých UX
-                        studií vyplývá, že právě délka mezi 50-75 znaky je pro
-                        čtení optimální.)
+                        řádku. Přidáním třídy
+                        <code>.readable</code> se omezí maximální délka odstavce
+                        na 75 znaků. (Z různých UX studií vyplývá, že právě
+                        délka mezi 50-75 znaky je pro čtení optimální.)
                     </p>
                 </section>
 
@@ -188,7 +189,8 @@
                             řádkování a spodní odsazení
                         </li>
                         <li>
-                            <code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code>
+                            <code>&lt;ul&gt;</code>
+                            <code>&lt;ol&gt;</code>
                             <code>&lt;dl&gt;</code> seznamy mají správné
                             zarovnání a řádkování
                         </li>
@@ -206,7 +208,8 @@
                             <code>&lt;strong&gt;</code> se chovají tak, jak mají
                         </li>
                         <li>
-                            <code>&lt;table&gt;</code> <code>&lt;tr&gt;</code>
+                            <code>&lt;table&gt;</code>
+                            <code>&lt;tr&gt;</code>
                             <code>&lt;th&gt;</code>
                             <code>&lt;td&gt;</code> tabulky mají přehlednější
                             uspořádání
@@ -329,8 +332,9 @@
                     <h3>Callout</h3>
                     <p>
                         Zvýrazněný kus textu – jednoduchý rámeček s okrajem,
-                        který lze aplikovat třídou <code>.callout</code> na
-                        libovolný <code>div</code> nebo odstavec <code>p</code>.
+                        který lze aplikovat třídou
+                        <code>.callout</code> na libovolný <code>div</code> nebo
+                        odstavec <code>p</code>.
                     </p>
                     <p class="callout">Jsem callout.</p>
                     <p>
@@ -339,8 +343,9 @@
                     </p>
                     <p class="callout bg-white">Jsem bílý</p>
                     <p>
-                        Callout může mít stín pomocí třídy <code>.shadow</code>.
-                        A samozřejmě je možné třídy kombinovat.
+                        Callout může mít stín pomocí třídy
+                        <code>.shadow</code>. A samozřejmě je možné třídy
+                        kombinovat.
                     </p>
                     <p class="callout shadow bg-white border">
                         Mám stín, jsem bílý a mám border.
@@ -594,12 +599,13 @@
                     <h3>Štítek</h3>
 
                     <p>
-                        Toto je základní <span class="tag">štítek</span>, stačí
-                        text obalit do spanu a přidat třídu <code>.tag</code>.
-                        Pokud je třída na <a href="#" class="tag">odkazu</a>,
-                        objeví se podtržení. K mání jsou i barvy
-                        <code>.red</code>, <code>.blue</code>,
-                        <code>.green</code> nebo <code>.yellow</code>.
+                        Toto je základní
+                        <span class="tag">štítek</span>, stačí text obalit do
+                        spanu a přidat třídu <code>.tag</code>. Pokud je třída
+                        na <a href="#" class="tag">odkazu</a>, objeví se
+                        podtržení. K mání jsou i barvy <code>.red</code>,
+                        <code>.blue</code>, <code>.green</code> nebo
+                        <code>.yellow</code>.
                     </p>
 
                     <p>
@@ -649,19 +655,19 @@
                 <h2>Sloupce</h2>
 
                 <p>
-                    Pro práci se sloupci používáme kontejner <code>.row</code>,
-                    do nějž můžeme vložit libovolné množství kontejnerů
-                    <code>.item</code>. Každý sloupec zabírá stejný podíl místa,
-                    gap je defaultně nastaven na baseline, vertikální zarovnání
-                    je uprostřed. Pokud potřebujeme zarovnat nahoru, stačí k
-                    <code>.row</code> přidat třídu <code>.top</code>.
+                    Pro práci se sloupci používáme kontejner
+                    <code>.row</code>, do nějž můžeme vložit libovolné množství
+                    kontejnerů <code>.item</code>. Každý sloupec zabírá stejný
+                    podíl místa, gap je defaultně nastaven na baseline,
+                    vertikální zarovnání je uprostřed. Pokud potřebujeme
+                    zarovnat nahoru, stačí k <code>.row</code> přidat třídu
+                    <code>.top</code>.
                 </p>
 
                 <p>
-                    Responzivitu řešíme třídami <code>.mobile</code>, případně
-                    <code>.tablet</code>, <code>.desktop</code> – podle
-                    nastavené třídy se od této velikosti dolů řadí prvky pod
-                    sebe.
+                    Pomoci tříd <code>.mobile</code>, případně
+                    <code>.tablet</code> či <code>.desktop</code> nastavíme, od
+                    jakého breakpointu se prvky řadí pod sebe.
                 </p>
 
                 <p>
@@ -678,6 +684,12 @@
                     roztažený pouze jeden sloupec a ostatní mají být smrsknuté,
                     stačí jej označit třídou <code>.wide</code>. To je velice
                     šikovné různých řádkových layoutů.
+                </p>
+
+                <p>
+                    K dispozici jsou také třídy pro vertikální zarovnání prvků,
+                    konkrétně <code>.middle</code>, <code>.top</code>,
+                    <code>.bottom</code> a <code>.stretch</code>.
                 </p>
 
                 <p>
@@ -796,10 +808,10 @@
                     <h3>Notifikace <a href="#notifikace">#</a></h3>
 
                     <p>
-                        Jako notifikaci můžeš použít <code>.callout</code>.
-                        Přidáním třídy <code>.dismissable</code> a vložením
-                        tlačítka s třídou <code>.close</code> lze zprovoznit
-                        zavírání křížkem.
+                        Jako notifikaci můžeš použít
+                        <code>.callout</code>. Přidáním třídy
+                        <code>.dismissable</code> a vložením tlačítka s třídou
+                        <code>.close</code> lze zprovoznit zavírání křížkem.
                     </p>
 
                     <div class="callout dismisable">
@@ -1235,8 +1247,12 @@
                                 src="https://placehold.co/240x240"
                                 class="rounded"
                             />
-                            <div class="mt"><a href="#">Název produktu</a></div>
-                            <div class="left"><strong>233 Kč</strong></div>
+                            <div class="mt">
+                                <a href="#">Název produktu</a>
+                            </div>
+                            <div class="left">
+                                <strong>233 Kč</strong>
+                            </div>
                             <div class="left">skladem</div>
                             <button class="mt">do košíku</button>
                         </div>
@@ -1245,8 +1261,12 @@
                                 src="https://placehold.co/240x240"
                                 class="rounded"
                             />
-                            <div class="mt"><a href="#">Název produktu</a></div>
-                            <div class="left"><strong>233 Kč</strong></div>
+                            <div class="mt">
+                                <a href="#">Název produktu</a>
+                            </div>
+                            <div class="left">
+                                <strong>233 Kč</strong>
+                            </div>
                             <div class="left">skladem</div>
                             <button class="mt">do košíku</button>
                         </div>
@@ -1345,7 +1365,9 @@
                         <div class="item">
                             <button class="square">M</button>
                         </div>
-                        <div class="item wide"><p class="center">imago</p></div>
+                        <div class="item wide">
+                            <p class="center">imago</p>
+                        </div>
                         <div class="item">
                             <button class="square">P</button>
                         </div>
@@ -1643,7 +1665,8 @@
 
                     <p>
                         Jednoduchý seznam se zvýrazněním při najetí myší, stačí
-                        ul seznamu dát třídu <code>.sidebar</code>
+                        ul seznamu dát třídu
+                        <code>.sidebar</code>
                     </p>
 
                     <ul class="sidebar">
