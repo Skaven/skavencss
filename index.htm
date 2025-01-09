@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Typographic minimalistic CSS framework."
+        />
+        <meta name="keywords" content="HTML, CSS, framework" />
+        <meta name="author" content="Skaven" />
+        <title>Skaven CSS</title>
+        <link rel="stylesheet" href="elements.css" />
+        <link rel="stylesheet" href="components.css" />
+        <script src="scripts.js" defer></script>
+    </head>
+
+    <body class="">
+        <header>
+            <div class="container pt">
+                <div class="row desktop middle">
+                    <div class="item wide">
+                        <hgroup>
+                            <h1>Skaven CSS</h1>
+                            <h2>minimalistický typografický CSS framework</h2>
+                        </hgroup>
+                    </div>
+                    <div class="item">
+                        <nav>
+                            <ul class="inline">
+                                <li>
+                                    <a href="#" id="toggle-baseline-grid"
+                                        >show baseline grid</a
+                                    >
+                                </li>
+                                <li><a href="#elementy">Elementy</a></li>
+                                <li><a href="#komponenty">Komponenty</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <hr />
+
+        <main>
+            <div class="container">
+                <h2>Pár slov…</h2>
+                <div class="readable">
+                    <p>
+                        Tento CSS layout či framework nebo možná už design
+                        systém, vznikl jako experiment se zarovnáním prvků
+                        stránky na vertikální mřížku. Tato mřížka se nastavuje
+                        jako proměnná v CSS, výchozí hodnota je 24px. Mřížku lze
+                        díky jednoduchému javascriptu skrýt nebo zobrazit –
+                        slouží to zejména k dodatečné kontrole zarovnání.
+                    </p>
+                    <p>
+                        Zarovnání textu na mřížku v html + CSS je trochu ošidné,
+                        protože nelze jednoduše určit, kde přesně je
+                        <i>baseline</i> fontu (každý font to má trochu jinak),
+                        takže jsem neřešil baseline, ale vycházel jsem z toho,
+                        jak html stránka pracuje s umístěním textu. Jsou zde dva
+                        základní parametry – výška řádku
+                        <code>line-height</code> a výška fontu
+                        <code>font-size</code>. Text je umístěn na střed výšky
+                        řádku, a zbylý prostor se rovnoměrně rozdělí nad a pod
+                        text. V našem případě to znamená, že nad textem i pod
+                        textem jsou 4px.
+                    </p>
+                </div>
+
+                <h2>Layout</h2>
+
+                <p>
+                    Framework používá poměrně jednoduchý layout. Ideální je
+                    rozdělit stránku na sémantické celky pomocí
+                    <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> a
+                    <code>&lt;footer&gt;</code> a do těchto oddílů vždy nejdříve
+                    vložit div s třícou <code>.container</code> – ten zařídí, že
+                    je obsah vycentrovaný, že má základní padding od levého a
+                    pravého okraje a že se od šířky <b>mega</b> už dále
+                    nezvětšuje.
+                </p>
+
+                <p>
+                    Tento postup byl zvolen pro případy, kdy je potřeba stylovat
+                    prvky na celou šířku stránky. Pro horní a dolní odsazení
+                    doporučuju ještě ke kontejneru přidat třídu
+                    <code>.pt</code> pro horní a <code>.pb</code> pro dolní
+                    padding.
+                </p>
+
+                <h3>Breakpointy</h3>
+
+                <p>Framework pracuje s pěti breakpointy:</p>
+
+                <div class="callout">
+                    <div class="mobile-yes">mobil (do 576px)</div>
+                    <div class="tablet-yes">tablet (do 768px)</div>
+                    <div class="desktop-yes">desktop (do 1024px)</div>
+                    <div class="widescreen-yes">widescreen (do 1280px)</div>
+                    <div class="fullhd-yes">fullhd (do 1536px)</div>
+                    <div class="mega-yes">mega (nad 1536px)</div>
+                </div>
+
+                <h2 id="elementy">Elementy</h2>
+
+                <p>
+                    Elementy jsou základní stavební prvky stránky, které
+                    stylujeme. Framework je nastaven tak, že v základu není
+                    potřeba používat žádné třídy – úpravy se aplikují na čisté
+                    html. To se hodí například pro stylování textu převedeného z
+                    markdownu.
+                </p>
+
+                <section>
+                    <h3>Nadpisy</h3>
+
+                    <p>
+                        Lze používat běžné nádpisy <code>h1</code> až
+                        <code>h4</code>, případně lze aplikovat třídy
+                        <code>.size1</code> až <code>.size4</code> na libovlný
+                        text. Velikosti nadpisů se řídí násobky 1,5.
+                    </p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>nadpis</th>
+                                <th>třída</th>
+                                <th>velikost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>h1</td>
+                                <td>.size1</td>
+                                <td>2,25 &times; 1,5 = 3,375 rem</td>
+                            </tr>
+                            <tr>
+                                <td>h2</td>
+                                <td>.size2</td>
+                                <td>1,5 &times; 1,5 = 2,25 rem</td>
+                            </tr>
+                            <tr>
+                                <td>h3</td>
+                                <td>.size3</td>
+                                <td>1 &times; 1,5 = 1,5 rem</td>
+                            </tr>
+                            <tr>
+                                <td>h4</td>
+                                <td>.size4</td>
+                                <td>1 rem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Pokud chceš nadpis s podnadpisem, obal <code>h1</code> a
+                        <code>h2</code> do tagu <code>&lt;hgroup&gt;</code>.
+                    </p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Odstavce</h3>
+
+                    <p class="readable">
+                        Odstavec není třeba stylovat žádnou třídou, je rovnou
+                        zarovnaný na grid a má spodní margin ve výšce jednoho
+                        řádku. Přidáním třídy <code>.readable</code> se omezí
+                        maximální délka odstavce na 75 znaků. (Z různých UX
+                        studií vyplývá, že právě délka mezi 50-75 znaky je pro
+                        čtení optimální.)
+                    </p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Textové elementy</h3>
+                    <ul>
+                        <li>
+                            <code>&lt;p&gt;</code> odstavce mají správné
+                            řádkování a spodní odsazení
+                        </li>
+                        <li>
+                            <code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code>
+                            <code>&lt;dl&gt;</code> seznamy mají správné
+                            zarovnání a řádkování
+                        </li>
+                        <li>
+                            <code>&lt;h1&gt;</code> až
+                            <code>&lt;h6&gt;</code> nadpisy mají nastavené
+                            velikosti a jsou usazeny na baseline grid
+                        </li>
+                        <li>
+                            <code>&lt;blockquote&gt;</code> citace jsou správně
+                            zarovnané
+                        </li>
+                        <li>
+                            <code>&lt;em&gt;</code> a
+                            <code>&lt;strong&gt;</code> se chovají tak, jak mají
+                        </li>
+                        <li>
+                            <code>&lt;table&gt;</code> <code>&lt;tr&gt;</code>
+                            <code>&lt;th&gt;</code>
+                            <code>&lt;td&gt;</code> tabulky mají přehlednější
+                            uspořádání
+                        </li>
+                    </ul>
+
+                    <p>
+                        Můžeš použít mark pro
+                        <mark>zvýraznení</mark> textu.<br />
+                        <del>Tento řádek je smazaný pomocí tagu del.</del><br />
+                        <s>Tento je přeškrtnutý díky tagu S.</s> Můžeš použít i
+                        <code>.strike</code><br />
+                        <ins>Tohle je vložení pomocí tagu ins.</ins><br />
+                        <u>Tohle je podtržený text díky tagu U.</u><br />
+                        <small>Tohle je malý text pomocí tagu small.</small>
+                        Můžeš použít i <code>.small</code><br />
+                        <b>Tohle je tučný text.</b> Můžeš použít i
+                        <code>.bold</code>.<br />
+                        <i>Toto je kurzíva.</i> Můžeš použít i
+                        <code>.italic</code>.<br />
+                        Takto označíme inline <code>kód</code> pomocí
+                        <code>&lt;code&gt;</code>.<br />
+                        A tady jsou klávesy kbd – stiskni <kbd>⌘</kbd> +
+                        <kbd>Ctrl</kbd> a kopíruj. <br />
+                        Text obsahuje zkratku
+                        <abbr title="Cascading Style Sheets">CSS</abbr>.
+                    </p>
+
+                    <h3>Barvy textu</h3>
+
+                    <p>
+                        Framework má definované některé základní barvy, jsou to
+                        třeba <code>.grey</code>, <code>.red</code> nebo
+                        <code>.blue</code>. Pro změnu pozadí se používá prefix
+                        <code>bg</code>, takže např. <code>.bg-grey</code>. V
+                        rámci CSS proměnných je definovaná <b>primary</b> barva,
+                        která se používá u tlačítek. Každá základní marva má
+                        navíc světlou a tmavou variantu.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Dělící linka</h3>
+
+                    <p>
+                        Dělící linka <code>&lt;hr&gt;</code> je pravená tak, že
+                        kopíruje linku gridu a má spodní margin vysoký 1 řádek.
+                    </p>
+
+                    <hr />
+
+                    <p>Můžeš ji použít pro optické oddělení textových bloků.</p>
+
+                    <p>
+                        Je tady dále třída <code>.divider</code>, která umožňuje
+                        vytvořit linku s textem.
+                    </p>
+
+                    <div class="divider">linka s textem</div>
+                </section>
+
+                <section>
+                    <h3>Seznamy</h3>
+                    <p>
+                        Dále jsou zde správně zarovnané číslované i nečíslované
+                        seznamy.
+                    </p>
+
+                    <ul>
+                        <li>jedna</li>
+                        <li>dva</li>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. In
+                            convallis. Quisque tincidunt scelerisque libero.
+                        </li>
+                    </ul>
+
+                    <ol>
+                        <li>jedna</li>
+                        <li>dva</li>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. In
+                            convallis. Quisque tincidunt scelerisque libero.
+                        </li>
+                    </ol>
+
+                    <p>
+                        Pomocí třídy <code>.inline</code> lze seznam zobrazit
+                        jako řádkový:
+                    </p>
+
+                    <ul class="inline">
+                        <li>jedna</li>
+                        <li>dva</li>
+                        <li>tři</li>
+                    </ul>
+                </section>
+                <hr />
+                <section>
+                    <h3>Citace</h3>
+
+                    <p>
+                        Citace se řeší klasicky tagem
+                        <code>&lt;blockquote&gt;</code>, autora lze uvést do
+                        vnořeného tagu <code>&lt;footer&gt;</code>.
+                    </p>
+
+                    <blockquote>
+                        Další příklad blockquote s delším textem, abychom
+                        viděli, jak se chová margin a padding.
+                        <footer>— Andrzej Sapkowski</footer>
+                    </blockquote>
+                </section>
+                <hr />
+                <section>
+                    <h3>Callout</h3>
+                    <p>
+                        Zvýrazněný kus textu – jednoduchý rámeček s okrajem,
+                        který lze aplikovat třídou <code>.callout</code> na
+                        libovolný <code>div</code> nebo odstavec <code>p</code>.
+                    </p>
+                    <p class="callout">Jsem callout.</p>
+                    <p>
+                        Callout může mít bílé pozadí pomocí třídy
+                        <code>.bg-white</code>.
+                    </p>
+                    <p class="callout bg-white">Jsem bílý</p>
+                    <p>
+                        Callout může mít stín pomocí třídy <code>.shadow</code>.
+                        A samozřejmě je možné třídy kombinovat.
+                    </p>
+                    <p class="callout shadow bg-white border">
+                        Mám stín, jsem bílý a mám border.
+                    </p>
+                    <p>
+                        Je zde i varianta méně robustního stínu
+                        <code>.shadow-light</code>
+                    </p>
+                    <p class="callout shadow-light border">Lehký stín</p>
+                </section>
+                <hr />
+                <section>
+                    <h3>Tlačítko</h3>
+
+                    <p>Tlačítka mají defaultně 100% šířku.</p>
+
+                    <button>tlačítko</button>
+
+                    <p>
+                        Máme dva typy tlačítek – primární a sekundární. Z
+                        hlediska UX platí, že je vhodné mít vždy jen jedno
+                        primární tlačítko na stránce.
+                    </p>
+                    <p>
+                        K označení primárního tlačítka stačí použít třídu
+                        <code>.primary</code>.
+                    </p>
+
+                    <div class="row">
+                        <div class="item">
+                            <button class="primary">primární</button>
+                        </div>
+                        <div class="item">
+                            <button>sekundární</button>
+                        </div>
+                    </div>
+
+                    <p>
+                        Pro čtvercová tlačítka používáme třídu
+                        <code>.square</code>. Používají se zejména v kombinaci s
+                        ikonkou. Nezapomeň ji dát třídu <code>.icon</code>.
+                    </p>
+
+                    <button class="square">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentitemor"
+                            class="icon"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                            />
+                        </svg>
+                    </button>
+
+                    <p>
+                        Dále máme dva doplňkové druhy tlačítek,
+                        <code>.pseudo</code>, které nevypadá jako tlačítko a
+                        <code>.ghost</code>, což je nenápadné tlačítko bez
+                        okraje.
+                    </p>
+
+                    <div class="row">
+                        <div class="item">
+                            <button class="pseudo">pseudo</button>
+                        </div>
+                        <div class="item">
+                            <button class="ghost">ghost</button>
+                        </div>
+                    </div>
+
+                    <p>
+                        Coby malá pocta neobrutalismu je tady možnost zvýraznění
+                        přes třídu <code>highlight</code>. Případně je možné
+                        udělat kombinaci tříd <code>.highlight</code> a
+                        <code>.secondary</code> a podbarvení bude šedé.
+                    </p>
+
+                    <div class="row">
+                        <div class="item">
+                            <button class="highlight">highlight</button>
+                        </div>
+                        <div class="item">
+                            <button class="highlight secondary">
+                                highlight secondary
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <hr />
+                <section>
+                    <h3>Tabulky</h3>
+
+                    <p>Tabulky jsou zarovnané na grid.</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sloupec 1</th>
+                                <th>Sloupec 2</th>
+                                <th>Sloupec 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Řádek 1, Sloupec 1</td>
+                                <td>Řádek 1, Sloupec 2</td>
+                                <td>Řádek 1, Sloupec 3</td>
+                            </tr>
+                            <tr>
+                                <td>Řádek 2, Sloupec 1</td>
+                                <td>Řádek 2, Sloupec 2</td>
+                                <td>Řádek 2, Sloupec 3</td>
+                            </tr>
+                            <tr>
+                                <td>Řádek 3, Sloupec 1</td>
+                                <td>Řádek 3, Sloupec 2</td>
+                                <td>Řádek 3, Sloupec 3</td>
+                            </tr>
+                            <tr>
+                                <td>Řádek 4, Sloupec 1</td>
+                                <td>Řádek 4, Sloupec 2</td>
+                                <td>Řádek 4, Sloupec 3</td>
+                            </tr>
+                            <tr>
+                                <td>Řádek 5, Sloupec 1</td>
+                                <td>Řádek 5, Sloupec 2</td>
+                                <td>Řádek 5, Sloupec 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <hr />
+                <section>
+                    <h3>Ikony</h3>
+
+                    <p>
+                        Ikony jsou pain. Doporučuju naládovat SVG přímo do textu
+                        a použít třídu <code>.icon</code>. Doporučuju použít
+                        <a href="https://heroicons.com">Heroicons</a>.
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentitemor"
+                            class="icon"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                            />
+                        </svg>
+                    </p>
+
+                    <p>
+                        Připraveni jsme i na použítí
+                        <a href="https://fontawesome.com/">Font Awesome</a>.
+                        Postup je klasický – tedy jeden span s třídou
+                        <code>.icon</code> a vnořený span s třídou řezu a
+                        konkrétní ikonky.
+                    </p>
+
+                    <p>
+                        Velkou ikonu lze udělat přidáním třídy
+                        <code>.big</code> – bude vysoká přes dva řádky.
+                    </p>
+                </section>
+                <hr />
+                <section>
+                    <h3>Obrázky</h3>
+
+                    <p>
+                        Obrázky na gridu jsou problematické – jakmile se mění
+                        šířka viewportu, obrázek mění výšku a tím pádem nezapadá
+                        do gridu. Proto jsou dvě možnosti:
+                    </p>
+
+                    <ol>
+                        <li>
+                            Neřešit to – prostě vložit obrázek a nechat ho
+                            posunout řádkování.
+                        </li>
+                        <li>Použít obrázek s přesnou velikostí.</li>
+                    </ol>
+
+                    <div class="row mb">
+                        <div class="item">
+                            <img src="https://placehold.co/24x24" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="https://placehold.co/48x48" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="https://placehold.co/72x72" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="https://placehold.co/96x96" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="https://placehold.co/120x120" alt="" />
+                        </div>
+                    </div>
+
+                    <p>
+                        Pro čtvercové obrázky jsou tady třídy
+                        <code>.onebox</code>, <code>.twobox</code>,
+                        <code>.threebox</code> a <code>.fourbox</code> – tyto
+                        nastavují přesnou šířku a výšku na daný počet řádků.
+                        Pokud obrázek nechceš čtvercový, jsou tady podobné třídy
+                        pouze pro výšku: <code>.oneline</code>,
+                        <code>.twolines</code>, <code>.threelines</code> a
+                        <code>.fourlines</code>.
+                    </p>
+
+                    <p>
+                        Můžeš použít tag <code>&lt;figure&gt;</code> a
+                        <code>&lt;figcaption&gt;</code>.
+                    </p>
+
+                    <figure>
+                        <img src="https://placehold.co/240x240" alt="240x240" />
+                        <figcaption>Tohle je nádhera</figcaption>
+                    </figure>
+
+                    <p>
+                        A je tady jedna vychytávka – hezký rámeček, stačí přidat
+                        class <code>.frame</code>.
+                    </p>
+
+                    <figure class="frame">
+                        <img src="https://placehold.co/240x240" alt="240x240" />
+                    </figure>
+                </section>
+                <hr />
+                <section>
+                    <h3>Progress bar</h3>
+
+                    <p>Používá nativní <code>&lt;progress&gt;</code>.</p>
+
+                    <progress value="15" max="100">15%</progress>
+                </section>
+                <hr />
+                <section>
+                    <h3>Štítek</h3>
+
+                    <p>
+                        Toto je základní <span class="tag">štítek</span>, stačí
+                        text obalit do spanu a přidat třídu <code>.tag</code>.
+                        Pokud je třída na <a href="#" class="tag">odkazu</a>,
+                        objeví se podtržení. K mání jsou i barvy
+                        <code>.red</code>, <code>.blue</code>,
+                        <code>.green</code> nebo <code>.yellow</code>.
+                    </p>
+
+                    <p>
+                        <span class="tag blue">modrý</span>
+                        <span class="tag red">červený</span>
+                        <span class="tag yellow">žlutý</span>
+                        <span class="tag green">zelený</span>
+                        <a href="#" class="tag">s odkazem</a>
+                    </p>
+
+                    <p>
+                        Štítek má dvě velikosti, ta menší funguje pěkně v rámci
+                        textu (inline), ta druhá, která se vytvoří třídou
+                        <code>.big</code> je v případě víceřádkového použití
+                        potřeba odsadit spodním marginem <code>.mb</code>.
+                    </p>
+
+                    <p>
+                        <span class="tag big blue">modrý</span>
+                        <span class="tag big red">červený</span>
+                        <span class="tag big yellow">žlutý</span>
+                        <span class="tag big green">zelený</span>
+                        <a href="#" class="tag big">s odkazem</a>
+                    </p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Indikátor</h3>
+
+                    <p>
+                        Štítek lze použít také jako "indikátor" – umísti jej do
+                        tlačítka (je potřeba tlačítku nastavit třídu
+                        <code>.relative</code> kvli správnému pozicování
+                        indikátoru) a přidej štítku třídu <code>.badge</code>.
+                    </p>
+
+                    <button class="relative">
+                        text
+                        <span class="tag badge blue">12</span>
+                    </button>
+                </section>
+
+                <hr />
+
+                <h2>Sloupce</h2>
+
+                <p>
+                    Pro práci se sloupci používáme kontejner <code>.row</code>,
+                    do nějž můžeme vložit libovolné množství kontejnerů
+                    <code>.item</code>. Každý sloupec zabírá stejný podíl místa,
+                    gap je defaultně nastaven na baseline, vertikální zarovnání
+                    je uprostřed. Pokud potřebujeme zarovnat nahoru, stačí k
+                    <code>.row</code> přidat třídu <code>.top</code>.
+                </p>
+
+                <p>
+                    Responzivitu řešíme třídami <code>.mobile</code>, případně
+                    <code>.tablet</code>, <code>.desktop</code> – podle
+                    nastavené třídy se od této velikosti dolů řadí prvky pod
+                    sebe.
+                </p>
+
+                <p>
+                    Pokud se řádku nastaví <code>.all-2</code>, fixne se na dvou
+                    položkách na řádek (pokud je jich více, zalomí se). Podobně
+                    lze nastavit i <code>.all-1</code> pro situace, kdy přes
+                    flexbox např. něco pozicujeme na střed a chceme jen jednu
+                    položku v řádku.
+                </p>
+
+                <p>
+                    Pokud mají být všechny prvky rovnoměrně roztažené, je třeba
+                    dát kontejneru třídu <code>.full</code>. Pokud má být
+                    roztažený pouze jeden sloupec a ostatní mají být smrsknuté,
+                    stačí jej označit třídou <code>.wide</code>. To je velice
+                    šikovné různých řádkových layoutů.
+                </p>
+
+                <p>
+                    Pokud potřebujeme jiný gap, jsou tady třídy
+                    <code>.compact</code> s polovičními mezerami a
+                    <code>.gapless</code> úplně bez mezer.
+                </p>
+
+                <div class="row">
+                    <div class="item callout">item</div>
+                    <div class="item wide callout">item wide</div>
+                    <div class="item callout">item</div>
+                </div>
+
+                <div class="row compact full">
+                    <div class="item callout">compact full</div>
+                    <div class="item callout">compact full</div>
+                </div>
+
+                <div class="row gapless">
+                    <div class="item callout">gapless</div>
+                    <div class="item callout">gapless</div>
+                </div>
+
+                <hr />
+
+                <div class="row mb">
+                    <div class="item">
+                        <img src="https://placehold.co/48x48" alt="" />
+                    </div>
+                    <div class="item wide">
+                        <hgroup class="mb-0">
+                            <h3>Skaven</h3>
+                            <h4>podtitul</h4>
+                        </hgroup>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="3"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3>Layout</h3>
+
+                <p>
+                    Tento prvek se hodí např. pro produktové výpisy, je navázán
+                    na
+                    <code>.row</code> – stačí mu přidat třídu
+                    <code>.layout</code> a začne se chovat tak, že zobrazuje pro
+                    různé šířky viewportu různý počet prvků na řádek.
+                </p>
+
+                <p>
+                    Výchozí počet jsou dva prvky, na tabletu a desktopu jsou 3,
+                    na widescreenu a fullhd 4 a na maximální šířce je to 6.
+                </p>
+
+                <div class="row layout">
+                    <div class="item callout">jedna</div>
+                    <div class="item callout">dva</div>
+                    <div class="item callout">tři</div>
+                    <div class="item callout">čtyři</div>
+                    <div class="item callout">pět</div>
+                    <div class="item callout">šest</div>
+                </div>
+
+                <hr />
+
+                <h2 id="komponenty">Okraje</h2>
+
+                <p>
+                    Odstavce, buttony nebo třeba callout mají defaultně
+                    nastavený spodní margin na velikost baseline – to kvůli
+                    formátování plain html.
+                </p>
+
+                <p>
+                    Je možné růčo měnit jak margin, tak padding a to ve čtyřech
+                    stupních – nula, half, standard a big. Např takto:
+                    <code>.m-0</code>, <code>.m-half</code>, <code>m</code>,
+                    <code>m-big</code> (pro padding se používá prefix p).
+                    Fungují i dílčí třídy jako <code>ml-0</code> nebo
+                    <code>px-half</code>.
+                </p>
+
+                <hr />
+
+                <section></section>
+
+                <h2 id="komponenty">Komponenty</h2>
+
+                <p>
+                    Toto už jsou nějaké složitější udělátka, nad rámec
+                    základních elementů. Většinou se skládají z několika prvků.
+                </p>
+
+                <hr />
+
+                <section>
+                    <h3>Notifikace <a href="#notifikace">#</a></h3>
+
+                    <p>
+                        Jako notifikaci můžeš použít <code>.callout</code>.
+                        Přidáním třídy <code>.dismissable</code> a vložením
+                        tlačítka s třídou <code>.close</code> lze zprovoznit
+                        zavírání křížkem.
+                    </p>
+
+                    <div class="callout dismisable">
+                        <div class="row">
+                            <div class="item wide">Text zprávy 3</div>
+                            <span class="item close"></span>
+                        </div>
+                    </div>
+
+                    <div class="callout dismisable">
+                        <div class="row">
+                            <div class="item wide">Text zprávy 2</div>
+                            <span class="item close"></span>
+                        </div>
+                    </div>
+
+                    <div class="callout dismisable">
+                        <div class="row">
+                            <div class="item wide">Text zprávy 1</div>
+                            <span class="item close"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Akordeon</h3>
+
+                    <section class="accordion">
+                        <div>
+                            <button
+                                class="accordion-header"
+                                aria-expanded="false"
+                                aria-controls="section1"
+                            >
+                                <span class="wide">Co je akordeon?</span>
+                                <span class="plus"></span>
+                            </button>
+                            <div id="section1" class="accordion-panel" hidden>
+                                <p>
+                                    An accordion is a UI component that allows
+                                    users to expand and itemlapse sections of
+                                    content.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                class="accordion-header"
+                                aria-expanded="false"
+                                aria-controls="section2"
+                            >
+                                <span class="wide"
+                                    >How do I create an accessible
+                                    accordion?</span
+                                >
+                                <span class="plus"></span>
+                            </button>
+                            <div id="section2" class="accordion-panel" hidden>
+                                <p>
+                                    By using semantic HTML, ARIA attributes, and
+                                    ensuring keyboard accessibility.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button
+                                class="accordion-header"
+                                aria-expanded="false"
+                                aria-controls="section3"
+                            >
+                                <span class="wide">Jak to funguje?</span>
+                                <span class="plus"></span>
+                            </button>
+                            <div id="section3" class="accordion-panel" hidden>
+                                <p>
+                                    Accessibility ensures that your content is
+                                    usable by everyone, including people with
+                                    disabilities.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Breadcrumb</h3>
+
+                    <p>
+                        Breadcrumb tvoříme jako číslovaný
+                        <code>&lt;ol&gt;</code> seznam, který má díky třídě
+                        <code>.breadcrumb</code> na obalovém
+                        <code>&lt;nav&gt;</code> kontejneru řádkové zobrazení.
+                    </p>
+
+                    <nav aria-label="breadcrumb" class="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="/">Domů</a>
+                            </li>
+                            <li>
+                                <a href="/kategorie">Kategorie</a>
+                            </li>
+                            <li>
+                                <a href="/kategorie/podkategorie"
+                                    >Podkategorie</a
+                                >
+                            </li>
+                            <li aria-current="page">Aktuální stránka</li>
+                        </ol>
+                    </nav>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Tabs</h3>
+
+                    <p>
+                        Toto jsou základní "ouška". je to jednoduchý
+                        <code>ul</code> seznam s třídou <code>.tabs</code>.
+                    </p>
+
+                    <ul class="tabs">
+                        <li><a href="#">jedna</a></li>
+                        <li class="active"><a href="#">dva</a></li>
+                        <li><a href="#">tři</a></li>
+                    </ul>
+
+                    <p>
+                        Pomocí třídy <code>.boxed</code> se docílí zobrazení s
+                        oušky.
+                    </p>
+
+                    <ul class="tabs boxed">
+                        <li><a href="#">jedna</a></li>
+                        <li class="active"><a href="#">dva</a></li>
+                        <li><a href="#">tři</a></li>
+                    </ul>
+
+                    <p>Testovací odstavec</p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Formuláře</h3>
+                    <form action="/submit" method="POST">
+                        <fieldset>
+                            <legend>Osobní údaje</legend>
+
+                            <label for="name">Jméno:</label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                placeholder="Zadejte své jméno"
+                                required
+                            />
+
+                            <label for="email">E-mail:</label>
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                placeholder="Zadejte svůj e-mail"
+                                required
+                            />
+
+                            <label for="password">Heslo:</label>
+                            <input
+                                id="password"
+                                type="password"
+                                name="password"
+                                placeholder="Zadejte heslo"
+                                required
+                            />
+
+                            <label for="phone">Telefonní číslo:</label>
+                            <input
+                                id="phone"
+                                type="tel"
+                                name="phone"
+                                placeholder="Zadejte své telefonní číslo"
+                            />
+
+                            <label for="age">Věk:</label>
+                            <input
+                                id="age"
+                                type="number"
+                                name="age"
+                                placeholder="Váš věk"
+                                min="1"
+                                max="120"
+                            />
+
+                            <label for="birthdate">Datum narození:</label>
+                            <input
+                                id="birthdate"
+                                type="date"
+                                name="birthdate"
+                            />
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Další údaje</legend>
+
+                            <label>Pohlaví:</label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="male"
+                                    required
+                                />
+                                Muž
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="female"
+                                />
+                                Žena
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="subscribe"
+                                    checked
+                                />
+                                Odebírat novinky
+                            </label>
+
+                            <label for="country">Stát:</label>
+                            <select id="country" name="country">
+                                <option value="">Vyberte stát</option>
+                                <option value="cz">Česká republika</option>
+                                <option value="sk">Slovensko</option>
+                                <option value="pl">Polsko</option>
+                            </select>
+
+                            <label for="message">Zpráva:</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                placeholder="Zde napište svou zprávu"
+                            ></textarea>
+
+                            <label for="country">Stát:</label>
+                            <select id="country" name="country">
+                                <option value="">Vyberte stát</option>
+                                <option value="cz">Česká republika</option>
+                                <option value="sk">Slovensko</option>
+                                <option value="pl">Polsko</option>
+                            </select>
+                        </fieldset>
+
+                        <button type="submit">Odeslat</button>
+                        <button type="reset">Reset</button>
+
+                        <h3>input + button</h3>
+
+                        <p>
+                            Obal <code>input</code> a <code>button</code> do
+                            divu s třídou <code>join</code>.
+                        </p>
+
+                        <div class="join">
+                            <input type="text" />
+                            <button>hledej</button>
+                        </div>
+                    </form>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Modal</h3>
+
+                    <p>
+                        Modální okno používá špetku javascriptu. Hlavní div má
+                        třídu
+                        <code>.modal</code> a nějaké id, které voláme na
+                        spouštěcím odkazu. Do něj je vnořen div
+                        <code>.modal-content</code>. Hlavička modalu je tvořena
+                        přes <code>.row</code>, který obsahuje dva prvky –
+                        nadpis a zavírací tlačítko. Pak následuje div s třídou
+                        <code>.modal-body</code> a to je veskrze vše.
+                    </p>
+
+                    <p>
+                        Modal se spouští odkazem nebo tlačítkem s třídou
+                        <code>.open-modal</code> a data-modal s hodnotou id
+                        patřičného modalu.
+                    </p>
+
+                    <button class="open-modal" data-modal="modal1">
+                        Otevři modal 1
+                    </button>
+                    <button class="open-modal" data-modal="modal2">
+                        Otevři modal 2
+                    </button>
+
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <div class="row border-bottom p">
+                                <div class="item wide">
+                                    <b>Nadpis</b>
+                                </div>
+                                <span
+                                    role="close-modal"
+                                    class="item close right"
+                                ></span>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. In convallis.
+                                    Quisque tincidunt scelerisque libero. Nulla
+                                    accumsan, elit sit amet varius semper, nulla
+                                    mauris mollis quam, tempor suscipit diam
+                                    nulla vel leo. Mauris dictum facilisis
+                                    augue. Itaque earum rerum hic tenetur a
+                                    sapiente delectus, ut aut reiciendis
+                                    voluptatibus maiores alias consequatur aut
+                                    perferendis doloribus asperiores repellat.
+                                    Nullam justo enim, consectetuer nec,
+                                    ullamcorper ac, vestibulum in, elit.
+                                </p>
+                                <div class="row full">
+                                    <div class="item">
+                                        <button class="mb-0">nechci</button>
+                                    </div>
+                                    <div class="item">
+                                        <button
+                                            role="close-modal"
+                                            class="primary mb-0"
+                                        >
+                                            OK
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <div class="row border-bottom p">
+                                <div class="item wide">
+                                    <b>Nadpis</b>
+                                </div>
+                                <span
+                                    role="close-modal"
+                                    class="item close right"
+                                ></span>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. In convallis.
+                                    Quisque tincidunt scelerisque libero. Nulla
+                                    accumsan, elit sit amet varius semper, nulla
+                                    mauris mollis quam, tempor suscipit diam
+                                    nulla vel leo. Mauris dictum facilisis
+                                    augue. Itaque earum rerum hic tenetur a
+                                    sapiente delectus, ut aut reiciendis
+                                    voluptatibus maiores alias consequatur aut
+                                    perferendis doloribus asperiores repellat.
+                                    Nullam justo enim, consectetuer nec,
+                                    ullamcorper ac, vestibulum in, elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h2>Dropdown</h2>
+
+                    <p>
+                        Celý dropdown se obalí divem s třídou
+                        <code>.dropdown</code>, spouštěcí button má třídu
+                        <code>.dropdown-toggle</code>, po něm následuje ul
+                        seznam s třídou <code>.dropdown-menu</code>. Odsazení
+                        dropdownu od buttonu je dáno spodním marginem buttonu,
+                        ideální je nastavit <code>.mb-half</code>.
+                    </p>
+
+                    <div class="dropdown">
+                        <button
+                            class="dropdown-toggle mb-half"
+                            type="button"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Dropdown
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="active" aria-current="true"
+                                    >Dropdown link 1</a
+                                >
+                            </li>
+                            <li><a href="#">Dropdown link 2</a></li>
+                            <li><a href="#">Dropdown link 3</a></li>
+                            <li><hr /></li>
+                            <li><a href="#">Dropdown link 4</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <h2>Pískoviště</h2>
+
+                <section>
+                    <div class="row">
+                        <div class="item">
+                            <img
+                                src="https://placehold.co/240x240"
+                                class="rounded"
+                            />
+                            <div class="mt"><a href="#">Název produktu</a></div>
+                            <div class="left"><strong>233 Kč</strong></div>
+                            <div class="left">skladem</div>
+                            <button class="mt">do košíku</button>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://placehold.co/240x240"
+                                class="rounded"
+                            />
+                            <div class="mt"><a href="#">Název produktu</a></div>
+                            <div class="left"><strong>233 Kč</strong></div>
+                            <div class="left">skladem</div>
+                            <button class="mt">do košíku</button>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <h3>Buy box</h3>
+                <section>
+                    <div class="callout bg-white">
+                        <p>
+                            <b class="green">skladem</b> – doručíme ve středu
+                            3.12,
+                            <a href="">doprava od 49 Kč</a>
+                        </p>
+                        <div class="row">
+                            <div class="item size3 wide bold">
+                                <p>1249 Kč</p>
+                            </div>
+                            <div class="item wide">
+                                <div class="join">
+                                    <button class="square">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1"
+                                            stroke="currentitemor"
+                                            class="icon"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M5 12h14"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <input type="text" />
+                                    <button class="square">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1"
+                                            stroke="currentitemor"
+                                            class="icon"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="item wide">
+                                <button class="mb-0 primary">do košíku</button>
+                            </div>
+                            <div class="item">
+                                <button class="square mb-0">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentitemor"
+                                        class="icon"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <h3>Mobilní záhlaví</h3>
+
+                <p>
+                    Tři verze mobilního záhlaví – v závislosti na velikosti
+                    mezer.
+                </p>
+
+                <section>
+                    <div class="row middle">
+                        <div class="item">
+                            <button class="square">M</button>
+                        </div>
+                        <div class="item wide"><p class="center">imago</p></div>
+                        <div class="item">
+                            <button class="square">P</button>
+                        </div>
+                        <div class="item">
+                            <button class="square">K</button>
+                        </div>
+                    </div>
+                    <div class="join">
+                        <input type="text" />
+                        <button>H</button>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <div class="row compact middle">
+                        <div class="item">
+                            <button class="square mb-half">M</button>
+                        </div>
+                        <div class="item wide">
+                            <p class="center mb-half">imago</p>
+                        </div>
+                        <div class="item">
+                            <button class="square mb-half">P</button>
+                        </div>
+                        <div class="item">
+                            <button class="square mb-half">K</button>
+                        </div>
+                    </div>
+                    <div class="join">
+                        <input type="text" />
+                        <button>H</button>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <div class="row gapless middle border">
+                        <div class="item br">
+                            <button class="square radiusless mb-0 borderless">
+                                M
+                            </button>
+                        </div>
+                        <div class="item wide">
+                            <p class="center mb-0">imago</p>
+                        </div>
+                        <div class="item bl br">
+                            <button class="square radiusless mb-0 borderless">
+                                P
+                            </button>
+                        </div>
+                        <div class="item">
+                            <button class="square radiusless mb-0 borderless">
+                                K
+                            </button>
+                        </div>
+                    </div>
+                    <div class="join bg-light p-half bl br bb mb">
+                        <input type="text" class="radiusless mb-0" />
+                        <button class="radiusless mb-0">H</button>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Recenze</h3>
+                    <div class="callout">
+                        <p class="bold mb-0">Jirka Reiter</p>
+                        <div class="row gapless mb-0">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon black"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon black"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. In
+                            convallis. Quisque tincidunt scelerisque libero.
+                            Nulla accumsan, elit sit amet varius semper, nulla
+                            mauris mollis quam, tempor suscipit diam nulla vel
+                            leo. Mauris dictum facilisis augue.
+                        </p>
+                        <div class="row">
+                            <div class="item wide grey">před 2 dny</div>
+                            <div class="item">0</div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Hodnocení</h3>
+                    <div class="row mb-half">
+                        <div>
+                            5
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="wide">
+                            <progress
+                                max="100"
+                                value="35"
+                                class="mb-0"
+                            ></progress>
+                        </div>
+                        <div>89</div>
+                    </div>
+                    <div class="row mb-half">
+                        <div>
+                            4
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="wide">
+                            <progress
+                                max="100"
+                                value="35"
+                                class="mb-0"
+                            ></progress>
+                        </div>
+                        <div>89</div>
+                    </div>
+                    <div class="row mb">
+                        <div>
+                            3
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentitemor"
+                                class="icon"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                                />
+                            </svg>
+                        </div>
+                        <div class="wide">
+                            <progress
+                                max="100"
+                                value="35"
+                                class="mb-0"
+                            ></progress>
+                        </div>
+                        <div>89</div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Megamenu</h3>
+
+                    <nav class="menu">
+                        <ul class="tabs">
+                            <li class="dropdown">
+                                <a href="#">dropdown</a>
+                                <div class="mega-menu">podmenu</div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">dva</a>
+                                <div class="mega-menu">podmenu 2</div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">tři</a>
+                                <div class="mega-menu">podmenu 3</div>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Menu list</h3>
+
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#">Nadmenu</a>
+                            <ul>
+                                <li><a href="#">podmenu 1</a></li>
+                                <li>podmenu 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Nadmenu 2
+                            <ul>
+                                <li>podmenu 3</li>
+                                <li>podmenu 4</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Sidebar</h3>
+
+                    <p>
+                        Jednoduchý seznam se zvýrazněním při najetí myší, stačí
+                        ul seznamu dát třídu <code>.sidebar</code>
+                    </p>
+
+                    <ul class="sidebar">
+                        <li><a href="">položka</a></li>
+                        <li><a href="">položka</a></li>
+                        <li><a href="">položka</a></li>
+                    </ul>
+
+                    <p>
+                        Přidáním třídy <code>.list</code> k sidebaru se změní
+                        stylování:
+                    </p>
+
+                    <ul class="sidebar list">
+                        <li><a href="">položka</a></li>
+                        <li><a href="">položka</a></li>
+                        <li><a href="">položka</a></li>
+                    </ul>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Carousel</h3>
+
+                    <p>
+                        Základem je <code>.carousel-container</code>, do něj se
+                        vloží samotný <code>.carousel</code> a
+                        <code>.carousel-button</code> s třídou
+                        <code>.prev</code> nebo <code>.next</code>. Uvnitř
+                        carouselu je pak klasický <code>.row</code> +
+                        <code>.item</code>.
+                    </p>
+
+                    <div class="carousel-container">
+                        <button class="carousel-button prev size3">←</button>
+                        <div class="carousel">
+                            <div class="row layout">
+                                <div class="item">
+                                    <div class="callout mb-0">Item 1</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 2</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 3</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 4</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 5</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 6</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-button next size3">→</button>
+                    </div>
+
+                    <p>
+                        Přidáním třídy <code>.lightbox</code> se zobrazuje pouze
+                        jedna listovací položka.
+                    </p>
+
+                    <div class="carousel-container">
+                        <button class="carousel-button prev size3">←</button>
+                        <div class="carousel lightbox">
+                            <div class="row">
+                                <div class="item">
+                                    <div class="callout mb-0">Item 1</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 2</div>
+                                </div>
+                                <div class="item">
+                                    <div class="callout mb-0">Item 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-button next size3">→</button>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Galerie</h3>
+
+                    <div class="row">
+                        <div class="item">
+                            <a class="open-modal" data-modal="modal4">
+                                <img
+                                    src="https://placehold.co/48x48"
+                                    alt="Thumbnail 1"
+                                />
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="open-modal" data-modal="modal5">
+                                <img
+                                    src="https://placehold.co/48x48"
+                                    alt="Thumbnail 2"
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Modaly -->
+                    <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <div class="row border-bottom p">
+                                <div class="item wide">
+                                    <b>Nadpis</b>
+                                </div>
+                                <span
+                                    role="close-modal"
+                                    class="item close right"
+                                ></span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="carousel-container">
+                                    <button class="carousel-button prev size3">
+                                        ←
+                                    </button>
+                                    <div class="carousel lightbox">
+                                        <div class="row">
+                                            <div class="item">
+                                                <img
+                                                    src="https://placehold.co/480x480"
+                                                    alt="Image 1"
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="https://placehold.co/480x480"
+                                                    alt="Image 2"
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="https://placehold.co/480x480"
+                                                    alt="Image 3"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-button next size3">
+                                        →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <hr />
+                <p class="center">&copy; 2024 Skaven.</p>
+            </div>
+        </footer>
+    </body>
+</html>
