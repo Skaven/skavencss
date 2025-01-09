@@ -1,0 +1,453 @@
+/* TABY */
+
+ul.tabs {
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    margin: 0 0 calc(var(--baseline) - 1px); /* srovnávám negativní margin o 1px */
+    padding: 0;
+    box-sizing: content-box;
+    gap: var(--baseline);
+}
+ul.tabs li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    /*white-space: nowrap;*/
+}
+ul.tabs li::before {
+    all: unset;
+}
+ul.tabs > li > a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1px;
+    padding: calc(var(--baseline) / 2) 0;
+    transition-duration: 0.2s;
+    transition-property: background-color, border-color, color;
+    vertical-align: top;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--light-grey);
+}
+ul.tabs > li a:hover {
+    border-bottom-color: var(--black);
+    color: var(--black);
+}
+ul.tabs > li.active a {
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    font-weight: 700;
+}
+/* boxed verze */
+ul.tabs.boxed > li.active a {
+    background-color: var(--white);
+    border-color: var(--light-grey);
+    border-bottom-color: transparent !important;
+    color: var(--primary);
+}
+ul.tabs.boxed a {
+    padding: calc((var(--baseline) / 2) - 1px) var(--baseline)
+        calc((var(--baseline) / 2)) var(--baseline);
+    border: 1px solid transparent;
+    border-start-end-radius: var(--radius);
+    border-start-start-radius: var(--radius);
+}
+ul.tabs.boxed a:hover {
+    background-color: var(--smoke);
+    border-bottom-color: var(--light-grey);
+}
+
+/* MODAL */
+.modal {
+    display: none; /* Modal je skrytý, dokud se neotevře */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-x: scroll;
+    padding: calc(var(--baseline) * 3) 0;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 0;
+    margin: auto;
+    border-radius: var(--radius);
+    width: 80%;
+    max-width: 500px;
+    /*max-height: 90%;*/
+    position: relative;
+}
+.modal-body {
+    padding: var(--baseline);
+}
+.modal-body > img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+.modal-body > :last-child {
+    margin-bottom: 0;
+}
+.no-scroll {
+    overflow: hidden;
+}
+
+.close {
+    background: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="0" y1="0" x2="20" y2="20"/%3E%3Cline x1="20" y1="0" x2="0" y2="20"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.close:hover {
+    transform: rotate(90deg);
+}
+
+/* MEGAMENU */
+.menu {
+    position: relative; /* Nastaví pozici jako referenční pro potomky s `position: absolute` */
+    width: 100%; /* Zajistí, že `<nav>` má plnou šířku */
+}
+.mega-menu-item {
+    position: static;
+}
+.mega-menu {
+    position: absolute; /* Absolutně pozicované vůči .menu (přes `<nav>`) */
+    top: 100%; /* Umístí menu pod hlavní navigaci */
+    left: 0; /* Začne u levého okraje rodiče `.menu` */
+    width: 100%; /* Nastaví šířku na 100 % šířky `.menu` */
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s; /* Žádný přechod */
+    background: var(--white);
+    padding: var(--baseline) 0;
+    border-bottom: 1px solid var(--light-grey);
+    box-sizing: border-box; /* Zahrnuje padding do šířky */
+    z-index: 1000; /* Zajišťuje, že menu je nad ostatními prvky */
+}
+.mega-menu-item:focus-within .mega-menu,
+.mega-menu-item:hover .mega-menu {
+    opacity: 1; /* Viditelné */
+    visibility: visible; /* Viditelné vizuálně i pro klávesnici */
+    transition-delay: 0.1s; /* Prodleva pro objevení */
+}
+.mega-menu-item:not(:hover) .mega-menu {
+    transition-delay: 0.1s; /* Prodleva pro zmizení */
+}
+.mega-menu ul {
+    margin: 0; /* srovná seznam odkazů v mega menu */
+}
+.mega-menu ul li a {
+    text-decoration: none !important; /* odkazy nejsou podtržené */
+}
+.mega-menu ul li a:hover {
+    text-decoration: underline !important; /* při najetí myší se podtrhnou */
+}
+
+/* MENU LIST */
+.menu-list {
+    margin: 0;
+}
+.menu-list a {
+    padding: calc(var(--baseline) / 4) calc(var(--baseline) / 2);
+    border-radius: var(--radius);
+}
+.menu-list a:hover {
+    background: var(--smoke);
+}
+.menu-list li {
+    padding: 0;
+    margin-bottom: calc(var(--baseline) / 2);
+}
+.menu-list li::before {
+    all: unset;
+    margin: 0;
+    padding: 0;
+}
+.menu-list ul {
+    margin: calc(var(--baseline) / 2) 0 0 calc(var(--baseline) / 2);
+    padding-left: calc(var(--baseline) / 2);
+    border-left: 1px solid var(--light-grey);
+}
+
+/* SIDEBAR */
+.sidebar {
+    margin: 0 0 var(--baseline);
+}
+.sidebar li {
+    padding: 0;
+    margin: 0;
+}
+.sidebar li::before {
+    all: unset;
+    margin: 0;
+    padding: 0;
+}
+.sidebar a {
+    display: flex;
+    padding: calc(var(--baseline) / 2);
+    margin: 0;
+    border-radius: var(--radius);
+}
+.sidebar a:hover {
+    background: var(--light);
+}
+
+/* LIST */
+.sidebar.list {
+    /*border-top: 1px solid var(--light-grey);*/
+}
+.sidebar.list a {
+    padding: calc(var(--baseline) / 2) 0 !important;
+    border-radius: unset;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+/* CAROUSEL */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Zajistí správné pozicování tlačítek */
+    width: 100%; /* Přizpůsobení šířky carouselu */
+    height: 100%; /* kvůli svislému carouselu, možná bude zlobit */
+    overflow: hidden; /* Skryje přetékající obsah */
+    margin: 0 0 var(--baseline);
+    min-height: calc(var(--baseline) * 2); /* Min výška kvůli tlačítkům */
+}
+.carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    width: 100%;
+    height: 100%; /* kvůli svislému carouselu, možná bude zlobit */
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel > .row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.carousel > .row > .item {
+    scroll-snap-align: start;
+}
+.carousel-button {
+    background: rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%);
+    z-index: 10;
+    pointer-events: all; /* Zajistí, že tlačítka jsou kliknutelná */
+    margin: 0;
+    padding: 0;
+    width: calc(var(--baseline) * 2);
+    height: calc(var(--baseline) * 2);
+    display: flex; /* Aktivace Flexboxu */
+    justify-content: center; /* Horizontální zarovnání na střed */
+    align-items: center; /* Vertikální zarovnání na střed */
+    color: var(--white) !important;
+}
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.carousel-button.prev {
+    left: 0; /* Posunutí od levého okraje */
+}
+.carousel-button.next {
+    right: 0; /* Posunutí od pravého okraje */
+}
+
+/* úprava kvůli fancyboxu */
+.lightbox .item {
+    flex: 0 0 100% !important;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+.lightbox .carousel-button {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dots button.active {
+    background: #000;
+}
+
+/* AKORDEON */
+
+.accordion {
+    margin: 0 0 calc(var(--baseline) - 1px);
+    border-top: 1px solid var(--light-grey);
+}
+
+.accordion > div {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--baseline);
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.accordion-header {
+    margin: 0;
+}
+.accordion-header:hover {
+    background: none;
+}
+
+/*.accordion-header[aria-expanded="true"] {
+    background: #e9e9e9;
+    }*/
+
+.accordion-panel {
+    padding: var(--baseline);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.plus {
+    background: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="12" y1="2" x2="12" y2="22"/%3E%3Cline x1="2" y1="12" x2="22" y2="12"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.plus.minus {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="2" y1="12" x2="22" y2="12"/%3E%3C/svg%3E');
+}
+
+/* DROPDOWN */
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown toggle button */
+.dropdown-toggle {
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none; /* Skryj menu ve výchozím stavu */
+    position: absolute;
+    top: 100%; /* Posuň menu dolů pod tlačítko */
+    left: 0;
+    z-index: 1000;
+    min-width: 200px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    padding: 0;
+}
+.dropdown-menu li::before {
+    all: unset;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: calc(var(--baseline) / 2) calc(var(--baseline) / 1);
+    text-decoration: none;
+    color: var(--black);
+}
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+    background-color: var(--light);
+}
+.dropdown-menu li hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--grey);
+}
+/* První položka - horní border-radius */
+.dropdown-menu li:first-child a {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+/* Poslední položka - spodní border-radius */
+.dropdown-menu li:last-child a {
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+.dropdown-menu.show {
+    display: block; /* Zobraz menu při aktivním stavu */
+}
+
+/* COUNTER */
+.counter input[type="number"] {
+    padding: calc((var(--baseline) / 4) - 1px);
+    width: calc(
+        (var(--baseline)) + 2px + 3ch
+    ); /* aby se do inputu vešly 3 znaky */
+}
+.counter button {
+    min-width: calc(var(--baseline) * 1.5);
+    width: calc(var(--baseline) * 1.5);
+}
