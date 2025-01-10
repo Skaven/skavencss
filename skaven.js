@@ -11,30 +11,30 @@ document.querySelectorAll("p").forEach((paragraph) => {
   );
 });
 
-// Přepínání mřížky
+// toto je IMAGO ONLY – zobrazovač dlouhého popisku kategorie
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleLink = document.getElementById("toggle-baseline-grid");
+  const textContainer = document.getElementById("category-text");
+  const readMoreLink = document.getElementById("read-more");
 
-  // Pokud element neexistuje, kód se ukončí
-  if (!toggleLink) {
+  // Zkontroluj, zda oba prvky existují
+  if (!textContainer || !readMoreLink) {
     console.warn(
-      'Element with ID "toggle-baseline-grid" nebyl na stránce nalezen.',
+      'Elementy "category-text" nebo "read-more" nebyly na stránce nalezeny.',
     );
     return;
   }
 
-  toggleLink.addEventListener("click", (event) => {
-    event.preventDefault(); // Zabrání výchozímu chování odkazu
-    const body = document.body;
+  // Kontrola, jestli text přetéká
+  if (textContainer.scrollHeight > textContainer.offsetHeight) {
+    readMoreLink.style.display = "inline"; // Zobrazí odkaz "Pokračovat"
+  }
 
-    // Přepnutí třídy na body
-    if (body.classList.contains("show-baseline-grid")) {
-      body.classList.remove("show-baseline-grid");
-      toggleLink.textContent = "show baseline grid"; // Změna textu zpět
-    } else {
-      body.classList.add("show-baseline-grid");
-      toggleLink.textContent = "hide baseline grid"; // Změna textu na "Hide"
-    }
+  // Přidání události pro zobrazení celého textu
+  readMoreLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Zabraňuje přesměrování odkazu
+    textContainer.style.maxHeight = "none"; // Zobrazí celý text
+    textContainer.style.overflow = "visible"; // Umožní viditelnost
+    readMoreLink.style.display = "none"; // Skryje odkaz
   });
 });
 
