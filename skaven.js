@@ -4,10 +4,10 @@ document.querySelectorAll("p").forEach((paragraph) => {
 });
 
 // Nezalomitelné mezery v odstavcích za jednopísmennými předložkami
-document.querySelectorAll("p").forEach((paragraph) => {
-  paragraph.innerHTML = paragraph.innerHTML.replace(
+document.querySelectorAll("p, h1, h2, h3, h4, h5, h6").forEach((element) => {
+  element.innerHTML = element.innerHTML.replace(
     /(\s|^)([ksvzouai])\s+/g,
-    "$1$2&nbsp;",
+    "$1$2&nbsp;"
   );
 });
 
