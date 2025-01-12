@@ -263,7 +263,7 @@ ul.tabs.boxed a:hover {
     padding: 0;
     width: calc(var(--baseline) * 2);
     height: calc(var(--baseline) * 2);
-    display: flex; /* Aktivace Flexboxu */
+    display: none; /* při inicializaci jsou skryté, zobrazí se až díky JS */
     justify-content: center; /* Horizontální zarovnání na střed */
     align-items: center; /* Vertikální zarovnání na střed */
     color: var(--white) !important;
@@ -364,6 +364,7 @@ ul.tabs.boxed a:hover {
     background-repeat: no-repeat;
     background-position: center;
     min-width: var(--baseline);
+    min-height: var(--baseline);
     border: none;
     margin: 0;
     padding: 0;
@@ -391,7 +392,7 @@ ul.tabs.boxed a:hover {
     display: none; /* Skryj menu ve výchozím stavu */
     position: absolute;
     top: 100%; /* Posuň menu dolů pod tlačítko */
-    left: 0;
+    right: 0;
     z-index: 1000;
     min-width: 200px;
     padding: 0;
