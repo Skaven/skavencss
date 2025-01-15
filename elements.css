@@ -1287,6 +1287,7 @@ select {
     background-position: right var(--baseline) center; /* Šipka zprava s odsazením var(--baseline) */
     background-size: 1rem; /* Šířka a výška šipky */
     background-repeat: no-repeat;
+    color: --var(black);
 }
 
 textarea {
