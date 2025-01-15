@@ -254,6 +254,9 @@ a {
 a:hover {
     color: var(--link-hover);
 }
+.pointer {
+    cursor: pointer;
+}
 
 b,
 strong,
@@ -745,8 +748,34 @@ progress::-moz-progress-bar {
     right: 0;
 }
 
-.pointer {
-    cursor: pointer;
+/* Třídy na výšku a šířku */
+
+.fullwidth {
+    width: 100% !important; /* asi do hlavniho frameworku */
+}
+.h1 {
+    height: var(--baseline);
+}
+.h2 {
+    height: calc(var(--baseline) * 2);
+}
+.h3 {
+    height: calc(var(--baseline) * 3);
+}
+.h4 {
+    height: calc(var(--baseline) * 4);
+}
+.w1 {
+    width: var(--baseline);
+}
+.w2 {
+    width: calc(var(--baseline) * 2);
+}
+.w3 {
+    width: calc(var(--baseline) * 3);
+}
+.w4 {
+    width: calc(var(--baseline) * 4);
 }
 
 /* Třídy pro margin */
