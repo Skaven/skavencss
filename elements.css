@@ -1424,6 +1424,7 @@ textarea {
 /* Na mobilu: 2 prvky */
 .layout > .item {
     flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important;
+    width: calc(50% - calc(var(--baseline) / 2));
     box-sizing: border-box;
     scroll-snap-align: start;
 }
@@ -1432,6 +1433,7 @@ textarea {
 @media (min-width: 576px) {
     .layout > .item {
         flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
+        width: calc(33.33% - calc(var(--baseline) * 2 / 3));
     }
 }
 
@@ -1439,6 +1441,7 @@ textarea {
 @media (min-width: 1024px) {
     .layout > .item {
         flex: 0 0 calc(25% - calc(var(--baseline) * 3 / 4)) !important;
+        width: calc(25% - calc(var(--baseline) * 3 / 4));
     }
 }
 
@@ -1446,6 +1449,7 @@ textarea {
 @media (min-width: 1280px) {
     .layout > .item {
         flex: 0 0 calc(25% - calc(var(--baseline) * 3 / 4)) !important;
+        width: calc(25% - calc(var(--baseline) * 3 / 4));
     }
 }
 
@@ -1453,5 +1457,6 @@ textarea {
 @media (min-width: 1536px) {
     .layout > .item {
         flex: 0 0 calc(16.66% - calc(var(--baseline) * 5 / 6)) !important;
+        width: calc(16.66% - calc(var(--baseline) * 5 / 6));
     }
 }
