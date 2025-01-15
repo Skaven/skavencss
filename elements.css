@@ -34,8 +34,7 @@
     --white: hsl(0, 0%, 100%); /* #fff */
 
     --grey: hsl(0, 0%, 60%); /* #999 */
-    --muted: hsl(0, 0%, 87%); /* #ddd */
-    --light-grey: hsl(0, 0%, 91%); /* #e7e7e7 */
+    --light-grey: hsl(0, 0%, 89%);
     --snow: hsl(0, 0%, 94%); /* #f0f0f0 */
     --light: hsl(0, 0%, 97%); /* #f8f8f8 */
 
@@ -316,7 +315,7 @@ blockquote {
 }
 blockquote footer {
     margin: var(--baseline) 0;
-    color: var(--light-grey);
+    color: var(--grey);
     text-align: right;
 }
 
@@ -379,7 +378,7 @@ a.tag {
     color: var(--black);
 }
 a.tag:hover {
-    background: var(--muted);
+    background: var(--light-grey);
 }
 .tag.blue {
     color: var(--black);
@@ -549,7 +548,7 @@ figure img {
 .frame {
     display: inline-grid;
     padding: calc(var(--baseline) - 1px);
-    border: 1px solid var(--muted);
+    border: 1px solid var(--light-grey);
     box-shadow: 0 0 20px var(--light-grey);
     background: var(--white);
     max-width: 100%;
@@ -636,7 +635,7 @@ ul.inline li::before {
 .breadcrumb ol li + li::before {
     content: var(--separator); /* Oddělovač mezi položkami */
     margin: 0 calc(var(--baseline) / 4);
-    color: var(--muted);
+    color: var(--light-grey);
 }
 
 /* TABULKY */
@@ -726,8 +725,8 @@ progress::-moz-progress-bar {
     width: 100%;
 }
 
-.muted {
-    color: var(--muted);
+.light-grey {
+    color: var(--light-grey);
 }
 
 .rounded {

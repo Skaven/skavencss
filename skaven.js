@@ -7,8 +7,32 @@ document.querySelectorAll("p").forEach((paragraph) => {
 document.querySelectorAll("p, h1, h2, h3, h4, h5, h6").forEach((element) => {
   element.innerHTML = element.innerHTML.replace(
     /(\s|^)([ksvzouai])\s+/g,
-    "$1$2&nbsp;"
+    "$1$2&nbsp;",
   );
+});
+
+// Přepínání mřížky
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleLink = document.getElementById("toggle-baseline-grid");
+
+  // Pokud element neexistuje, kód se ukončí
+  if (!toggleLink) {
+    return;
+  }
+
+  toggleLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Zabrání výchozímu chování odkazu
+    const body = document.body;
+
+    // Přepnutí třídy na body
+    if (body.classList.contains("show-baseline-grid")) {
+      body.classList.remove("show-baseline-grid");
+      toggleLink.textContent = "show baseline grid"; // Změna textu zpět
+    } else {
+      body.classList.add("show-baseline-grid");
+      toggleLink.textContent = "hide baseline grid"; // Změna textu na "Hide"
+    }
+  });
 });
 
 // toto je IMAGO ONLY – zobrazovač dlouhého popisku kategorie
