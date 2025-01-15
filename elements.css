@@ -28,31 +28,37 @@
 /* VARIABLES */
 
 :root {
-    /* colors */
-    --black: #000;
-    --white: #fff;
+    /* barvy */
+    /* H - odstín, S - sytost, L - světlost  */
+    --black: hsl(90, 5%, 7%); /* #131412 */
+    --white: hsl(0, 0%, 100%); /* #fff */
 
-    --grey: #999; /* vhodné pro text */
-    --light-grey: #e7e7e7; /* zejména bordery, původně #ccc */
-    --muted: #ddd;
-    /*--smoke: #eee; */
-    --snow: #f0f0f0; /* code, tag, progress bar, hodí se na menší plochy */
-    --light: #f8f8f8; /* callout a neklikatelný button, hodí se na větší plochy */
+    --grey: hsl(0, 0%, 60%); /* #999 */
+    --muted: hsl(0, 0%, 87%); /* #ddd */
+    --light-grey: hsl(0, 0%, 91%); /* #e7e7e7 */
+    --snow: hsl(0, 0%, 94%); /* #f0f0f0 */
+    --light: hsl(0, 0%, 97%); /* #f8f8f8 */
 
-    --red: #eb5757;
-    --dark-red: #eb3b2f;
-    --light-red: #fbe4e4; /* Zesvětleno z #f8caca */
-    --blue: #0077dd;
-    --dark-blue: #005bb5; /* 0065bb */
-    --light-blue: #d3ebff; /* Zesvětleno z #a8d8ff */
-    --yellow: #f5a524;
-    --dark-yellow: #a16607;
-    --light-yellow: #fce8c6; /* Zesvětleno z #f9d18f */
-    --green: #618d0a; /* barva buttonu, shrekovka */
-    --dark-green: #4d7400; /* barva odkazů, kořenovka */
-    --light-green: #c9f570;
+    --dark-red: hsl(0, 79%, 56%); /* #eb3b2f */
+    --red: hsl(0, 79%, 63%); /* #eb5757 */
+    --light-red: hsl(0, 79%, 90%); /* #fbe4e4 */
 
-    --highlight: #ffd508;
+    --dark-blue: hsl(208, 100%, 36%); /* #005bb5 */
+    --blue: hsl(208, 100%, 43%); /* #0077dd */
+    --light-blue: hsl(208, 100%, 90%); /* #d3ebff */
+
+    --dark-orange: hsl(37, 91%, 48%); /* #a16607 */
+    --orange: hsl(37, 91%, 55%); /* #f5a524 */
+    --light-orange: hsl(37, 91%, 90%); /* #fce8c6 */
+
+    --dark-green: hsl(80, 100%, 23%); /* #4d7400 */ /* zachováno */
+    --green: hsl(80, 87%, 30%); /* #618d0a */ /* zachováno */
+    --light-green: hsl(80, 87%, 80%); /* #c9f570 */
+    /*--light-green: hsl(80, 100%, 90%); /* #c9f570 */
+
+    --dark-yellow: hsl(50, 100%, 44%); /* #ccaa06 */
+    --yellow: hsl(50, 100%, 52%); /* #ffd508 */
+    --light-yellow: hsl(50, 100%, 90%); /* #ffdd39 */
 
     /* přiřazení barev */
     --body-color: var(--sss); /* barva textu */
@@ -287,7 +293,7 @@ sup {
 }
 
 mark {
-    background-color: var(--highlight); /* tohle je prostě zvýrazňovač */
+    background-color: var(--yellow); /* tohle je prostě zvýrazňovač */
 }
 
 small,
@@ -387,6 +393,10 @@ a.tag:hover {
     color: var(--white);
     background: var(--black);
 }
+.tag.orange {
+    color: var(--black);
+    background: var(--light-orange);
+}
 .tag.yellow {
     color: var(--black);
     background: var(--light-yellow);
@@ -429,6 +439,9 @@ p {
 .yellow {
     color: var(--yellow);
 }
+.orange {
+    color: var(--orange);
+}
 .red {
     color: var(--red);
 }
@@ -438,6 +451,13 @@ p {
 .black {
     color: var(--black) !important;
 }
+.blue {
+    color: var(--blue);
+}
+.green {
+    color: var(--green);
+}
+
 .bg-grey {
     background-color: var(--grey) !important;
 }
@@ -1018,6 +1038,46 @@ button.red:hover,
 .button.red:hover {
     background: var(--dark-red);
 }
+button.blue,
+.button.blue {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+}
+button.blue:hover,
+.button.blue:hover {
+    background: var(--dark-blue);
+}
+button.green,
+.button.green {
+    background: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white);
+}
+button.green:hover,
+.button.green:hover {
+    background: var(--dark-green);
+}
+button.yellow,
+.button.yellow {
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    color: var(--white);
+}
+button.yellow:hover,
+.button.yellow:hover {
+    background: var(--dark-yellow);
+}
+button.orange,
+.button.orange {
+    background: var(--orange);
+    border: 1px solid var(--orange);
+    color: var(--white);
+}
+button.orange:hover,
+.button.orange:hover {
+    background: var(--dark-orange);
+}
 
 button.pseudo,
 .button.pseudo,
@@ -1068,7 +1128,7 @@ button.highlight,
 button.highlight:after,
 .button.highlight:after {
     content: "";
-    background: var(--highlight);
+    background: var(--yellow);
     display: block;
     position: absolute;
     top: calc((var(--baseline) * (1)) / 2);

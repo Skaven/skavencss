@@ -94,3 +94,34 @@ input[type="radio"][disabled]:checked {
     flex: 1; /* Sloupec zabere stejný podíl místa */
     box-sizing: border-box; /* Správné počítání velikostí */
 }
+
+=======
+
+Záloha barev
+
+--black: #000;
+--white: #fff;
+
+--grey: #999; /* vhodné pro text */
+--light-grey: #e7e7e7; /* zejména bordery, původně #ccc */
+--muted: #ddd;
+/*--smoke: #eee; */
+--snow: #f0f0f0; /* code, tag, progress bar, hodí se na menší plochy */
+--light: #f8f8f8; /* callout a neklikatelný button, hodí se na větší plochy */
+
+--red: #eb5757;
+--dark-red: #eb3b2f;
+--light-red: #fbe4e4; /* Zesvětleno z #f8caca */
+--blue: #0077dd;
+--dark-blue: #005bb5; /* 0065bb */
+--light-blue: #d3ebff; /* Zesvětleno z #a8d8ff */
+--yellow: #f5a524;
+--dark-yellow: #a16607;
+--light-yellow: #fce8c6; /* Zesvětleno z #f9d18f */
+--green: #618d0a; /* barva buttonu, shrekovka */
+--dark-green: #4d7400; /* barva odkazů, kořenovka */
+--light-green: #c9f570; /* zvaž #e2ffa7 – je ještě světlejší, víc do pastelu */
+
+--light-highlight: #ffdd39; /* fff3b1 */
+--highlight: #ffd508;
+--dark-highlight: #ccaa06;
