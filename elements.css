@@ -714,6 +714,7 @@ progress::-moz-progress-bar {
 }
 .left {
     text-align: left;
+    justify-content: left;
 }
 .right {
     text-align: right;
