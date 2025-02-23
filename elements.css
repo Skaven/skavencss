@@ -383,6 +383,11 @@ a.tag {
 a.tag:hover {
     background: var(--light-grey);
 }
+.tag.white {
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+}
 .tag.blue {
     color: var(--black);
     background: var(--light-blue);
