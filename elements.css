@@ -60,7 +60,7 @@
     --light-yellow: hsl(50, 100%, 90%); /* #ffdd39 */
 
     /* přiřazení barev */
-    --body-color: var(--sss); /* barva textu */
+    --body-color: var(--black); /* barva textu */
     --heading-color: var(--black); /* barva nadpisu */
     --primary: var(--blue); /* barva priárních tlačítek */
     --primary-hover: var(
@@ -201,7 +201,7 @@ h6 {
 
 /* Používám rytmus 1.5 -> 1 -> 1,5 -> 2.25 -> 3.375 -> 5.0625 */
 .big {
-    font-size: 5.062rem;
+    font-size: 5.0625rem;
     line-height: calc(var(--baseline) * 3);
 }
 h1,
@@ -365,6 +365,7 @@ kbd {
     padding: 0.1rem 0.3rem;
     font-size: 85%;
     line-height: calc(var(--baseline) * 0.85);
+    align-items: center;
 }
 .tag.big {
     padding: 0 0.5rem;
@@ -1468,11 +1469,12 @@ textarea {
 /* IKONY */
 
 .icon {
-    display: inline-block;
+    display: inline-flex;
     width: var(--baseline);
     height: var(--baseline);
     line-height: var(--baseline);
-    /* vertical-align: middle; /* Vertikální zarovnání - blblo to :( */
+    justify-content: center;
+    align-items: center;
     stroke: currentColor; /* Ikona dědí barvu textu */
 }
 .icon.big {
