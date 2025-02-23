@@ -722,7 +722,7 @@ progress::-moz-progress-bar {
 }
 .left {
     text-align: left;
-    justify-content: left;
+    justify-content: left !important;
 }
 .right {
     text-align: right;
