@@ -326,7 +326,8 @@ ul.tabs.boxed a:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: var(--baseline);
+    padding: var(--baseline) var(--baseline) calc(var(--baseline) - 1px)
+        var(--baseline);
     text-align: left;
     border: none;
     cursor: pointer;

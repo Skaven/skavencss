@@ -358,7 +358,7 @@ kbd {
 }
 
 .tag {
-    display: inline-flex;
+    /*display: inline-flex;*/ /* dodrbalo to řádkování */
     background: var(--snow);
     border-radius: var(--radius);
     hyphens: none;
@@ -368,9 +368,11 @@ kbd {
     align-items: center;
 }
 .tag.big {
+    display: inline-flex;
     padding: 0 0.5rem;
     font-size: 100%;
     line-height: var(--baseline);
+    height: var(--baseline);
 }
 a.tag {
     text-decoration: underline;
@@ -1470,11 +1472,12 @@ textarea {
 
 .icon {
     display: inline-flex;
-    width: var(--baseline);
-    height: var(--baseline);
+    width: 1rem;
+    height: 1rem;
     line-height: var(--baseline);
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     stroke: currentColor; /* Ikona dědí barvu textu */
 }
 .icon.big {
