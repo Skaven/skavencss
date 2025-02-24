@@ -1522,27 +1522,27 @@ textarea {
 
 /* LAYOUT */
 
-/* Na mobilu: 2 prvky */
+/* Na mobilu: 1 prvek */
 .layout > .item {
-    flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important;
-    width: calc(50% - calc(var(--baseline) / 2));
+    flex: 0 0 100% !important;
+    width: 100%;
     box-sizing: border-box;
     scroll-snap-align: start;
 }
 
-/* Na tabletu: 3 prvky */
+/* Na tabletu: 2 prvky */
 @media (min-width: 576px) {
     .layout > .item {
-        flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
-        width: calc(33.33% - calc(var(--baseline) * 2 / 3));
+        flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important;
+        width: calc(50% - calc(var(--baseline) / 2));
     }
 }
 
-/* Na desktopu: 4 prvky */
+/* Na desktopu: 3 prvky */
 @media (min-width: 1024px) {
     .layout > .item {
-        flex: 0 0 calc(25% - calc(var(--baseline) * 3 / 4)) !important;
-        width: calc(25% - calc(var(--baseline) * 3 / 4));
+        flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
+        width: calc(33.33% - calc(var(--baseline) * 2 / 3));
     }
 }
 
