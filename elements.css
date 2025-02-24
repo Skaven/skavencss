@@ -1538,6 +1538,14 @@ textarea {
     }
 }
 
+/* Na širokém tabletu: 3 prvky */
+@media (min-width: 768px) {
+    .layout > .item {
+        flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
+        width: calc(33.33% - calc(var(--baseline) * 2 / 3));
+    }
+}
+
 /* Na desktopu: 4 prvky */
 @media (min-width: 1024px) {
     .layout > .item {
