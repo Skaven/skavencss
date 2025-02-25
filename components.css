@@ -204,6 +204,7 @@ ul.tabs.boxed a:hover {
     padding: calc(var(--baseline) / 2);
     margin: 0;
     border-radius: var(--radius);
+    align-items: center;
 }
 .sidebar a:hover {
     background: var(--light);
