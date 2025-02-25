@@ -388,6 +388,9 @@ a.tag:hover {
     background: var(--white);
     border: 1px solid var(--light-grey);
 }
+.tag.white:hover {
+    background: var(--snow) !important;
+}
 .tag.blue {
     color: var(--black);
     background: var(--light-blue);
