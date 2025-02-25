@@ -388,9 +388,6 @@ a.tag:hover {
     background: var(--white);
     border: 1px solid var(--light-grey);
 }
-.tag.white:hover {
-    background: var(--snow) !important;
-}
 .tag.blue {
     color: var(--black);
     background: var(--light-blue);
@@ -571,7 +568,7 @@ ul,
 ol {
     padding-left: 0; /* Zruší výchozí odsazení seznamu */
     list-style: none; /* Odstraní výchozí odrážky */
-    margin: 0 0 var(--baseline) var(--baseline);
+    margin: 0 0 var(--baseline) 0;
     line-height: var(--baseline); /* Zarovná výšku řádku podle baseline gridu */
 }
 
@@ -589,6 +586,10 @@ ul li::before {
     left: 0; /* Zarovná číslo úplně doleva */
     top: -1px; /* Srovnávací prasárna */
     line-height: var(--baseline); /* Zarovná číslo podle baseline gridu */
+}
+li > ul:last-child,
+li > ol:last-child {
+    margin-bottom: 0; /* Pro vnořené seznamy odstraníme spodní margin */
 }
 
 ol {
@@ -1486,7 +1487,6 @@ textarea {
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    text-decoration: none !important;
     stroke: currentColor; /* Ikona dědí barvu textu */
 }
 .icon.big {
@@ -1526,24 +1526,16 @@ textarea {
 
 /* LAYOUT */
 
-/* Na mobilu: 1 prvek */
+/* Na mobilu: 2 prvky */
 .layout > .item {
-    flex: 0 0 100% !important;
-    width: 100%;
+    flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important;
+    width: calc(50% - calc(var(--baseline) / 2));
     box-sizing: border-box;
     scroll-snap-align: start;
 }
 
-/* Na tabletu: 2 prvky */
+/* Na tabletu: 3 prvky */
 @media (min-width: 576px) {
-    .layout > .item {
-        flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important;
-        width: calc(50% - calc(var(--baseline) / 2));
-    }
-}
-
-/* Na širokém tabletu: 3 prvky */
-@media (min-width: 768px) {
     .layout > .item {
         flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
         width: calc(33.33% - calc(var(--baseline) * 2 / 3));
