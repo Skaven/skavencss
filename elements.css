@@ -758,7 +758,7 @@ progress::-moz-progress-bar {
     position: relative;
 }
 .inline {
-    display: inline;
+    display: inline !important;
 }
 .flex {
     display: flex !important;
