@@ -610,7 +610,7 @@ ol li::before {
     line-height: var(--baseline); /* Zarovná číslo podle baseline gridu */
 }
 ul.inline {
-    display: flex; /* Umožní zarovnání položek vedle sebe */
+    display: flex !important; /* Umožní zarovnání položek vedle sebe */
     flex-wrap: wrap; /* Zajistí zalomení položek, pokud je málo místa */
     gap: var(--baseline); /* Mezera mezi položkami */
     padding-left: 0;
