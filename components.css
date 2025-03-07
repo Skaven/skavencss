@@ -114,9 +114,18 @@ ul.tabs.boxed a:hover {
     padding: 0;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    position: relative;
 }
 .close:hover {
     transform: rotate(90deg);
+}
+.close::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
 }
 
 /* MEGAMENU */
