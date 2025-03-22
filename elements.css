@@ -1402,6 +1402,9 @@ textarea {
     width: auto;
     min-width: calc(var(--baseline) * 2);
 }
+.join select {
+    width: auto;
+}
 
 /* SLOUPCE */
 .row {
