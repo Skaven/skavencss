@@ -798,7 +798,7 @@ progress::-moz-progress-bar {
     height: calc(var(--baseline) * 4);
 }
 .w1 {
-    width: var(--baseline);
+    width: var(--baseline) !important;
 }
 .w2 {
     width: calc(var(--baseline) * 2);
