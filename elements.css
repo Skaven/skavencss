@@ -1292,6 +1292,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 0;
     padding: 0;
 }
+/* disabled prvky */
+button:disabled, .button:disabled {
+    opacity: 0.5 !important;
+}
 /* file uploader */
 .file {
     margin: 0 0 var(--baseline);
