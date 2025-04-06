@@ -1,30 +1,3 @@
-/* FONTS */
-
-@font-face {
-    font-family: "iamono";
-    src: url("https://www.skaven.cz/css/fonts/iamono.woff2") format("woff2");
-}
-@font-face {
-    font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro.woff2") format("woff2");
-    font-weight: 400;
-    font-feature-settings: "ss04"; /* běžná nula */
-}
-@font-face {
-    font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro_bold.woff2")
-        format("woff2");
-    font-weight: 700;
-    font-feature-settings: "ss04"; /* běžná nula */
-}
-@font-face {
-    font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro_italic.woff2")
-        format("woff2");
-    font-style: italic;
-    font-feature-settings: "ss04"; /* běžná nula */
-}
-
 /* VARIABLES */
 
 :root {
@@ -74,13 +47,6 @@
     --baseline: 24px; /* base line height */
     --font-size: 16px; /* default font size */
     --radius: 4px; /* default border radius */
-
-    /* fonts */
-    --heading-font: "iaquatro", sans-serif; /* Font pro nadpisy */
-    --body-font: "iaquatro", sans-serif; /* Font pro běžný text */
-    --button-font: "iamono", monospace; /* Font na tlačítka */
-    --bullet: "•"; /* Symbol pro odrážku */
-    --separator: "/"; /* breadcrumb separator */
 
     --body-weight: 400; /* Tloušťka písma pro text */
     --heading-weight: 900; /* Tloušťka písma pro nadpisy */
@@ -1293,7 +1259,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0;
 }
 /* disabled prvky */
-button:disabled, .button:disabled {
+button:disabled,
+.button:disabled {
     opacity: 0.5 !important;
 }
 /* file uploader */
