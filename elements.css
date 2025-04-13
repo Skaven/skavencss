@@ -792,20 +792,11 @@ progress::-moz-progress-bar {
 .mb-0 {
     margin-bottom: 0 !important;
 }
-.m {
-    margin: var(--baseline) !important;
+.mr-quarter {
+    margin-right: calc(var(--baseline) / 4) !important;
 }
-.mt {
-    margin-top: var(--baseline) !important;
-}
-.mr {
-    margin-right: var(--baseline) !important;
-}
-.mb {
-    margin-bottom: var(--baseline) !important;
-}
-.ml {
-    margin-left: var(--baseline) !important;
+.ml-quarter {
+    margin-left: calc(var(--baseline) / 4) !important;
 }
 .m-half {
     margin: calc(var(--baseline) / 2) !important;
@@ -825,6 +816,21 @@ progress::-moz-progress-bar {
 .my-half {
     padding-top: calc(var(--baseline) / 2) !important;
     padding-bottom: calc(var(--baseline) / 2) !important;
+}
+.m {
+    margin: var(--baseline) !important;
+}
+.mt {
+    margin-top: var(--baseline) !important;
+}
+.mr {
+    margin-right: var(--baseline) !important;
+}
+.mb {
+    margin-bottom: var(--baseline) !important;
+}
+.ml {
+    margin-left: var(--baseline) !important;
 }
 .m-big {
     margin: calc(var(--baseline) * 2) !important;
