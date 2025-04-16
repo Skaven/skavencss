@@ -6,6 +6,7 @@
     --black: hsl(90, 5%, 7%); /* #131412 */
     --white: hsl(0, 0%, 100%); /* #fff */
 
+    --dark-grey: hsl(0, 0%, 46%); /* #757575 */
     --grey: hsl(0, 0%, 60%); /* #999 */
     --light-grey: hsl(0, 0%, 89%);
     --snow: hsl(0, 0%, 94%); /* #f0f0f0 */
@@ -403,6 +404,9 @@ p {
 }
 
 /* barvy */
+.dark-grey {
+    color: var(--dark-grey);
+}
 .grey {
     color: var(--grey);
 }
