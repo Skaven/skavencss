@@ -258,7 +258,8 @@ sup {
     top: -0.5em;
 }
 
-mark {
+mark,
+.mark {
     background-color: var(--yellow); /* tohle je prostě zvýrazňovač */
 }
 
