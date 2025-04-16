@@ -103,6 +103,7 @@ ul.tabs.boxed a:hover {
 }
 
 .close {
+    all: unset;
     background: none;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="0" y1="0" x2="20" y2="20"/%3E%3Cline x1="20" y1="0" x2="0" y2="20"/%3E%3C/svg%3E');
     background-repeat: no-repeat;
@@ -117,9 +118,11 @@ ul.tabs.boxed a:hover {
     position: relative;
 }
 .close:hover {
+    background-color: transparent;
     transform: rotate(90deg);
 }
 .close::after {
+    all: unset;
     content: "";
     position: absolute;
     top: calc((var(--baseline) / 2) * -1);
