@@ -997,94 +997,94 @@ button,
 }
 button:hover,
 .button:hover {
-    background: var(--snow);
+    background-color: var(--snow);
     color: var(--black);
 }
 
 button.primary,
 .button.primary {
-    background: var(--primary);
+    background-color: var(--primary);
     border: 1px solid var(--primary);
     color: var(--white);
 }
 button.primary:hover,
 .button.primary:hover {
-    background: var(--primary-hover);
+    background-color: var(--primary-hover);
 }
 
 button.red,
 .button.red {
-    background: var(--red);
+    background-color: var(--red);
     border: 1px solid var(--red);
     color: var(--white);
 }
 button.red:hover,
 .button.red:hover {
-    background: var(--dark-red);
+    background-color: var(--dark-red);
 }
 button.blue,
 .button.blue {
-    background: var(--blue);
+    background-color: var(--blue);
     border: 1px solid var(--blue);
     color: var(--white);
 }
 button.blue:hover,
 .button.blue:hover {
-    background: var(--dark-blue);
+    background-color: var(--dark-blue);
 }
 button.green,
 .button.green {
-    background: var(--green);
+    background-color: var(--green);
     border: 1px solid var(--green);
     color: var(--white);
 }
 button.green:hover,
 .button.green:hover {
-    background: var(--dark-green);
+    background-color: var(--dark-green);
 }
 button.yellow,
 .button.yellow {
-    background: var(--yellow);
+    background-color: var(--yellow);
     border: 1px solid var(--yellow);
     color: var(--white);
 }
 button.yellow:hover,
 .button.yellow:hover {
-    background: var(--dark-yellow);
+    background-color: var(--dark-yellow);
 }
 button.orange,
 .button.orange {
-    background: var(--orange);
+    background-color: var(--orange);
     border: 1px solid var(--orange);
     color: var(--white);
 }
 button.orange:hover,
 .button.orange:hover {
-    background: var(--dark-orange);
+    background-color: var(--dark-orange);
 }
 
 button.pseudo,
 .button.pseudo,
 select.pseudo {
     border: 1px solid transparent;
-    background: transparent;
+    background-color: transparent;
     /*text-decoration: underline;*/
 }
 button.pseudo:hover,
 .button.pseudo:hover,
 select.pseudo:hover {
-    background: var(--snow);
+    background-color: var(--snow);
 }
 
 button.ghost,
 .button.ghost {
     border: none;
-    background: var(--light);
+    background-color: var(--light);
     /*text-decoration: underline;*/
 }
 button.ghost:hover,
 .button.ghost:hover {
-    background: var(--light-grey);
+    background-color: var(--light-grey);
 }
 
 button.square,
@@ -1112,7 +1112,7 @@ button.highlight,
 button.highlight:after,
 .button.highlight:after {
     content: "";
-    background: var(--yellow);
+    background-color: var(--yellow);
     display: block;
     position: absolute;
     top: calc((var(--baseline) * (1)) / 2);
@@ -1125,11 +1125,11 @@ button.highlight:after,
 }
 button.secondary:after,
 .button.secondary:after {
-    background: var(--light-grey);
+    background-color: var(--light-grey);
 }
 button.highlight:hover,
 .button.highlight:hover {
-    background: var(--white);
+    background-color: var(--white);
 }
 button.highlight:hover:after,
 .button.highlight:hover:after {
@@ -1163,7 +1163,7 @@ textarea {
     border: 1px solid var(--black);
     box-sizing: border-box;
     border-radius: var(--radius);
-    background: var(--white);
+    background-color: var(--white);
     width: 100%;
 }
 input:focus,
