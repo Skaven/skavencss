@@ -1446,6 +1446,9 @@ textarea {
 .all-2 > .item {
     flex: 0 0 calc(50% - calc(var(--baseline) / 2)) !important; /* dva prvky na řádek */
 }
+.all-3 > .item {
+    flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important; /* tři prvky na řádek */
+}
 
 .compact {
     gap: calc(
