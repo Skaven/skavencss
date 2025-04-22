@@ -30,7 +30,7 @@ ul.tabs > li > a {
     transition-duration: 0.2s;
     transition-property: background-color, border-color, color;
     vertical-align: top;
-    color: var(--primary);
+    color: var(--link);
     text-decoration: none;
     border-bottom: 1px solid var(--light-grey);
 }
@@ -48,7 +48,7 @@ ul.tabs.boxed > li.active a {
     background-color: var(--white);
     border-color: var(--light-grey);
     border-bottom-color: transparent !important;
-    color: var(--primary);
+    color: var(--link);
 }
 ul.tabs.boxed a {
     padding: calc((var(--baseline) / 2) - 1px) var(--baseline)
