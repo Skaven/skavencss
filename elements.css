@@ -435,6 +435,9 @@ p {
 .green {
     color: var(--green);
 }
+.dark-green {
+    color: var(--dark-green);
+}
 
 .bg-grey {
     background-color: var(--grey) !important;
