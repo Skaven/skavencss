@@ -36,6 +36,7 @@
     /* přiřazení barev */
     --body-color: var(--black); /* barva textu */
     --heading-color: var(--black); /* barva nadpisu */
+    --highlight: var(--yellow);
     --primary: var(--blue); /* barva priárních tlačítek */
     --primary-hover: var(
         --dark-blue
@@ -260,7 +261,7 @@ sup {
 
 mark,
 .mark {
-    background-color: var(--yellow); /* tohle je prostě zvýrazňovač */
+    background-color: var(--highlight); /* tohle je prostě zvýrazňovač */
 }
 
 small,
@@ -1117,41 +1118,41 @@ button.highlight,
 .button.highlight {
     position: relative;
 }
-button.highlight:after,
-.button.highlight:after {
+button.highlight:before,
+.button.highlight:before {
     content: "";
-    background-color: var(--yellow);
+    background-color: var(--highlight);
     display: block;
     position: absolute;
-    top: calc((var(--baseline) * (1)) / 2);
-    right: calc((var(--baseline) * (1)) / 2);
-    bottom: calc((var(--baseline) * (-1)) / 2);
-    left: calc((var(--baseline) * (-1)) / 2);
+    top: calc((var(--baseline) * (1)) / 3);
+    right: calc((var(--baseline) * (-1)) / 3);
+    bottom: calc((var(--baseline) * (-1)) / 3);
+    left: calc((var(--baseline) * (1)) / 3);
     z-index: -1;
     transition: all 0.2s ease;
     border-radius: var(--radius);
 }
-button.secondary:after,
-.button.secondary:after {
+button.secondary:before,
+.button.secondary:before {
     background-color: var(--light-grey);
 }
 button.highlight:hover,
 .button.highlight:hover {
     background-color: var(--white);
 }
-button.highlight:hover:after,
-.button.highlight:hover:after {
-    top: calc((var(--baseline) * (1)) / 3);
-    right: calc((var(--baseline) * (1)) / 3);
-    bottom: calc((var(--baseline) * (-1)) / 3);
-    left: calc((var(--baseline) * (-1)) / 3);
-}
-button.highlight:active:after,
-.button.highlight:active:after {
+button.highlight:hover:before,
+.button.highlight:hover:before {
     top: calc((var(--baseline) * (1)) / 4);
-    right: calc((var(--baseline) * (1)) / 4);
+    right: calc((var(--baseline) * (-1)) / 4);
     bottom: calc((var(--baseline) * (-1)) / 4);
-    left: calc((var(--baseline) * (-1)) / 4);
+    left: calc((var(--baseline) * (1)) / 4);
+}
+button.highlight:active:before,
+.button.highlight:active:before {
+    top: calc((var(--baseline) * (1)) / 6);
+    right: calc((var(--baseline) * (-1)) / 6);
+    bottom: calc((var(--baseline) * (-1)) / 6);
+    left: calc((var(--baseline) * (1)) / 6);
 }
 button.static,
 .button.static {
