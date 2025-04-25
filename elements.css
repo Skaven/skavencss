@@ -1142,17 +1142,17 @@ button.highlight:hover,
 }
 button.highlight:hover:before,
 .button.highlight:hover:before {
-    top: calc((var(--baseline) * (1)) / 4);
-    right: calc((var(--baseline) * (-1)) / 4);
-    bottom: calc((var(--baseline) * (-1)) / 4);
-    left: calc((var(--baseline) * (1)) / 4);
-}
-button.highlight:active:before,
-.button.highlight:active:before {
     top: calc((var(--baseline) * (1)) / 6);
     right: calc((var(--baseline) * (-1)) / 6);
     bottom: calc((var(--baseline) * (-1)) / 6);
     left: calc((var(--baseline) * (1)) / 6);
+}
+button.highlight:active:before,
+.button.highlight:active:before {
+    top: calc((var(--baseline) * (1)) / 8);
+    right: calc((var(--baseline) * (-1)) / 8);
+    bottom: calc((var(--baseline) * (-1)) / 8);
+    left: calc((var(--baseline) * (1)) / 8);
 }
 button.static,
 .button.static {
