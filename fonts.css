@@ -30,6 +30,7 @@
     --heading-font: "iaquatro", sans-serif; /* Font pro nadpisy */
     --body-font: "iaquatro", sans-serif; /* Font pro běžný text */
     --button-font: "iamono", monospace; /* Font na tlačítka */
+    --mono-font: "iamono", monospace; /* Font monospace */
     --bullet: "•"; /* Symbol pro odrážku */
     --separator: "/"; /* breadcrumb separator */
 }

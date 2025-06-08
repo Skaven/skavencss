@@ -308,10 +308,10 @@ code {
     color: var(--red);
     font-size: 85%;
     line-height: calc(var(--baseline) * 0.85);
-    font-family: "iamono";
+    font-family: var(--mono-font);
 }
 .codeblock {
-    font-family: "iamono";
+    font-family: var(--mono-font);
 }
 
 kbd {
@@ -323,7 +323,7 @@ kbd {
     padding: 0.1rem 0.3rem;
     font-size: 85%;
     line-height: calc(var(--baseline) * 0.85);
-    font-family: "iamono";
+    font-family: var(--mono-font);
 }
 
 .tag {
