@@ -33,6 +33,10 @@
     --yellow: hsl(50, 100%, 52%); /* #ffd508 */
     --light-yellow: hsl(50, 100%, 90%); /* #ffdd39 */
 
+    --dark-violet: hsl(270, 87%, 30%);
+    --violet: hsl(270, 87%, 40%);
+    --light-violet: hsl(270, 87%, 85%);
+
     /* přiřazení barev */
     --body-color: var(--black); /* barva textu */
     --heading-color: var(--black); /* barva nadpisu */
@@ -417,6 +421,12 @@ p {
 }
 .yellow {
     color: var(--yellow);
+}
+.dark-yellow {
+    color: var(--dark-yellow);
+}
+.violet {
+    color: var(--violet);
 }
 .orange {
     color: var(--orange);
