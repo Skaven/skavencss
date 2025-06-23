@@ -449,6 +449,9 @@ p {
 .bg-white {
     background-color: var(--white) !important;
 }
+.bg-black {
+    background-color: var(--black) !important;
+}
 
 /* dělící čára */
 hr {
