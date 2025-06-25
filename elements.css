@@ -1457,6 +1457,19 @@ textarea {
     }
 }
 
+@media (max-width: 1279px) {
+    .widescreen {
+        flex-direction: column; /* pod sebou na widescreenu */
+        /* gap: 0; */
+    }
+    .widescreen > .item {
+        width: 100%;
+    }
+    .fromwidescreen {
+        display: none !important; /* zobrazí se od widescreenu (včetně) nahoru */
+    }
+}
+
 .all-1 > .item {
     flex: 0 0 100% !important; /* jeden prvek na řádek */
 }
