@@ -78,6 +78,7 @@ html {
     font-weight: var(--body-weight); /* Tloušťka písma pro text */
     box-sizing: border-box; /* Šířka a výška prvku zahrnují obsah, padding i border */
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
 
@@ -1504,7 +1505,7 @@ textarea {
     line-height: var(--baseline);
     justify-content: center;
     align-items: center;
-    vertical-align: middle;
+    vertical-align: -2px;
     stroke: currentColor; /* Ikona dědí barvu textu */
 }
 .icon.big {
