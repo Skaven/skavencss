@@ -1287,6 +1287,71 @@
                 <hr />
 
                 <section>
+                    <h3>Mega menu</h3>
+
+                    <p>
+                        Mega menu je CSS only, je založeno na třídě
+                        <code>.menu</code>, která se aplikuje na
+                        <code>nav</code> kontejner, uvnitř je klasický ul
+                        seznam, můžeme mu dát třeba třídu <code>.tabs</code>.
+                        Položky tohoto seznamu jsou označené třídou
+                        <code>.mega-menu-item</code> a pokud má být menu
+                        rozbalovací, musí položka obsahuvat div kontejner s
+                        třídou <code>.mega-menu</code> – uvnitř může být
+                        libovolný obsah, který se objeví po najetí kurzorem na
+                        odkaz.
+                    </p>
+
+                    <nav class="menu">
+                        <ul class="tabs">
+                            <li class="mega-menu-item">
+                                <a href="#">Kategorie</a>
+                                <div class="mega-menu">
+                                    <ul>
+                                        <li><a href="#">Položka 1</a></li>
+                                        <li><a href="#">Položka 2</a></li>
+                                        <li><a href="#">Položka 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">O nás</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                        </ul>
+                    </nav>
+
+                    <p>
+                        U tohoto menu používáme
+                        <code>transition-delay</code> 0.1 s – to proto, aby se
+                        menu nezobrazovalo při náhodném přejetí odkazu kurzorem.
+                    </p>
+                </section>
+
+                <hr />
+
+                <section>
+                    <h3>Hover menu</h3>
+
+                    <p>
+                        Hover menu je komponenta, která zobrazí div po najetí
+                        myší na odkaz, je to vlastně mix mezi dropdownem a mega
+                        menu. Je to užitečné na případy jako hover košík.
+                        Spouštěcí tlačítko nebo odkaz obal třídou
+                        <code>.hover-toggle</code> a uvnitř této třídy vlož DIV
+                        s třídou <code>hover-menu</code> – v tomto divu je pak
+                        samotný obsah menu.
+                    </p>
+
+                    <div class="hover-toggle">
+                        <button class="mb-half" type="button">
+                            Hover Menu
+                        </button>
+                        <div class="hover-menu">obsah</div>
+                    </div>
+                </section>
+
+                <hr />
+
+                <section>
                     <h3>Sidebar</h3>
 
                     <p>

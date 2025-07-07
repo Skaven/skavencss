@@ -395,12 +395,9 @@ ul.tabs.boxed a:hover {
     position: relative;
     display: inline-block;
 }
-
 /* Dropdown toggle button */
 .dropdown-toggle {
 }
-
-/* Dropdown menu */
 .dropdown-menu {
     display: none; /* Skryj menu ve výchozím stavu */
     position: absolute;
@@ -416,8 +413,6 @@ ul.tabs.boxed a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
 }
-
-/* Dropdown items */
 .dropdown-menu li {
     padding: 0;
 }
@@ -451,6 +446,43 @@ ul.tabs.boxed a:hover {
 }
 .dropdown-menu.show {
     display: block; /* Zobraz menu při aktivním stavu */
+}
+
+/* HOVER MENU */
+.hover-toggle {
+    position: relative;
+    display: inline-block;
+}
+.hover-toggle:focus-within .hover-menu,
+.hover-toggle:hover .hover-menu {
+    opacity: 1; /* Viditelné */
+    visibility: visible; /* Viditelné vizuálně i pro klávesnici */
+    transition-delay: 0.1s; /* Prodleva pro objevení */
+}
+.hover-toggle:not(:hover) .hover-menu {
+    transition-delay: 0.1s; /* Prodleva pro zmizení */
+}
+.hover-menu {
+    position: absolute; /* Absolutně pozicované vůči .menu (přes `<nav>`) */
+    top: 100%;
+    right: 0;
+    width: 100%;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s;
+    padding: var(--baseline);
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Zahrnuje padding do šířky */
+    z-index: 1000; /* Zajišťuje, že menu je nad ostatními prvky */
+}
+.hover-menu hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--grey);
 }
 
 /* COUNTER */
