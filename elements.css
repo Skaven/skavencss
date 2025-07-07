@@ -1443,6 +1443,9 @@ textarea {
     .tablet > .item {
         width: 100%;
     }
+    .fromtablet {
+        display: none !important; /* zobrazí se od tabletu (včetně) nahoru */
+    }
 }
 
 @media (max-width: 1023px) {

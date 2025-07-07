@@ -467,7 +467,6 @@ ul.tabs.boxed a:hover {
     top: 100%;
     right: 0;
     width: 100%;
-    min-width: 200px;
     opacity: 0;
     visibility: hidden;
     transition-delay: 0s;
