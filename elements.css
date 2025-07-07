@@ -131,6 +131,9 @@ body {
     .desktop-yes {
         display: flex;
     }
+    .totablet {
+        display: none !important; /* zobrazí se od mobilu po tablet (včetně) nahoru */
+    }
 }
 /* widescreen */
 @media (min-width: 1024px) {
