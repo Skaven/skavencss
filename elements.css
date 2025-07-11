@@ -771,6 +771,9 @@ progress::-moz-progress-bar {
     left: 0;
     right: 0;
 }
+.lazyload {
+    content-visibility: auto;
+}
 
 /* Třídy na výšku a šířku */
 

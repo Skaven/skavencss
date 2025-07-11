@@ -872,6 +872,12 @@
                 <section>
                     <h3>Akordeon</h3>
 
+                    <p>
+                        Používáme section <code>.accordion</code>, do ní jsou
+                        vnořené divy obsahující button a div s ID označující
+                        unikátní sekci. Otevírání zajišťuje javascript.
+                    </p>
+
                     <section class="accordion">
                         <div>
                             <button
@@ -928,6 +934,51 @@
                                 </p>
                             </div>
                         </div>
+
+                        <p class="mt">
+                            Umíme to i s nativním elementem
+                            <code>details</code> – není potřeba dodávat žádnou
+                            třídu, stačí použít standardní zápis a rozbalenou
+                            část zabalit do divu.
+                        </p>
+
+                        <details>
+                            <summary>
+                                <span>Je tohle dobré?</span>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M6 9l6 6 6-6"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    />
+                                </svg>
+                            </summary>
+                            <div>Tohle je dobré!</div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                <span>Je tohle dobré dva?</span>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M6 9l6 6 6-6"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    />
+                                </svg>
+                            </summary>
+                            <div>Tohle je dobré dva!</div>
+                        </details>
                     </section>
                 </section>
 
@@ -1160,6 +1211,12 @@
                     <p>
                         Pokud chci modal přes celou obrazovku, přidám ke třídě
                         <code>.modal</code> třídu <code>.fullscreen</code>.
+                    </p>
+
+                    <p>
+                        Pokud chci záhlaví vždy viditelné, stačí do header
+                        přidat třídu <code>.sticky</code> a
+                        <code>.bg-white</code>.
                     </p>
 
                     <p>

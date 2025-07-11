@@ -393,6 +393,36 @@ ul.tabs.boxed a:hover {
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="2" y1="12" x2="22" y2="12"/%3E%3C/svg%3E');
 }
 
+/* NATIVNÍ AKORDEON -> experimantální */
+
+summary {
+    list-style: none; /* Skryj výchozí šipku */
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+summary svg {
+    transition: transform 0.2s ease;
+}
+details[open] summary svg {
+    transform: rotate(180deg);
+}
+details > div {
+    padding-top: var(--baseline);
+}
+details {
+    border-bottom: 1px solid var(--light-grey);
+    padding: var(--baseline) var(--baseline) calc(var(--baseline) - 1px)
+        var(--baseline);
+}
+
 /* DROPDOWN */
 
 /* Dropdown container */
