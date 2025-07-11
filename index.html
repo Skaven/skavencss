@@ -1149,10 +1149,17 @@
                         třídu
                         <code>.modal</code> a nějaké id, které voláme na
                         spouštěcím odkazu. Do něj je vnořen div
-                        <code>.modal-content</code>. Hlavička modalu je tvořena
-                        přes <code>.row</code>, který obsahuje dva prvky –
-                        nadpis a zavírací tlačítko. Pak následuje div s třídou
+                        <code>.modal-content</code>. Záhlaví modalu je div
+                        (sémanticky správně používám <code>header</code>) s
+                        třídou <code>.row</code> obsahující dva prvky – nadpis a
+                        zavírací tlačítko. Pak následuje div (sémanticky správně
+                        <code>section</code>) s třídou
                         <code>.modal-body</code> a to je veskrze vše.
+                    </p>
+
+                    <p>
+                        Pokud chci modal přes celou obrazovku, přidám ke třídě
+                        <code>.modal</code> třídu <code>.fullscreen</code>.
                     </p>
 
                     <p>
@@ -1162,24 +1169,24 @@
                     </p>
 
                     <button class="open-modal" data-modal="modal1">
-                        Otevři modal 1
+                        Otevři modal
                     </button>
                     <button class="open-modal" data-modal="modal2">
-                        Otevři modal 2
+                        Otevři fullscreen modal
                     </button>
 
                     <div id="modal1" class="modal">
                         <div class="modal-content">
-                            <div class="row border-bottom p">
+                            <header class="row border-bottom p">
                                 <div class="item wide">
-                                    <b>Nadpis</b>
+                                    <b>Nadpis modalu</b>
                                 </div>
                                 <span
                                     role="close-modal"
                                     class="item close right"
                                 ></span>
-                            </div>
-                            <div class="modal-body">
+                            </header>
+                            <section class="modal-body">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetuer
                                     adipiscing elit. Cum sociis natoque
@@ -1209,22 +1216,22 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
                         </div>
                     </div>
 
-                    <div id="modal2" class="modal">
+                    <div id="modal2" class="modal fullscreen">
                         <div class="modal-content">
-                            <div class="row border-bottom p">
+                            <header class="row border-bottom p">
                                 <div class="item wide">
-                                    <b>Nadpis</b>
+                                    <b>Nadpis fullscreen modalu</b>
                                 </div>
                                 <span
                                     role="close-modal"
                                     class="item close right"
                                 ></span>
-                            </div>
-                            <div class="modal-body">
+                            </header>
+                            <section class="modal-body">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetuer
                                     adipiscing elit. Cum sociis natoque
@@ -1241,7 +1248,7 @@
                                     Nullam justo enim, consectetuer nec,
                                     ullamcorper ac, vestibulum in, elit.
                                 </p>
-                            </div>
+                            </section>
                         </div>
                     </div>
                 </section>

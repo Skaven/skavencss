@@ -77,7 +77,6 @@ ul.tabs.boxed a:hover {
     overflow-x: scroll;
     padding: calc(var(--baseline) * 3) 0;
 }
-
 .modal-content {
     background-color: var(--white);
     padding: 0;
@@ -87,6 +86,15 @@ ul.tabs.boxed a:hover {
     max-width: 500px;
     /*max-height: 90%;*/
     position: relative;
+}
+.fullscreen {
+    padding: 0 !important;
+}
+.fullscreen .modal-content {
+    max-width: none;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
 }
 .modal-body {
     padding: var(--baseline);
@@ -101,7 +109,6 @@ ul.tabs.boxed a:hover {
 .no-scroll {
     overflow: hidden;
 }
-
 .close {
     all: unset;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="0" y1="0" x2="20" y2="20"/%3E%3Cline x1="20" y1="0" x2="0" y2="20"/%3E%3C/svg%3E');
