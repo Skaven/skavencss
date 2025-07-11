@@ -93,8 +93,6 @@ ul.tabs.boxed a:hover {
 .fullscreen .modal-content {
     max-width: none;
     width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
 }
 .modal-body {
     padding: var(--baseline);
