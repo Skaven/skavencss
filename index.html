@@ -96,16 +96,184 @@
 
                 <h3>Breakpointy</h3>
 
-                <p>Framework pracuje s pěti breakpointy:</p>
+                <p id="viewport-width"></p>
 
-                <div class="callout">
-                    <div class="mobile-yes">mobil (do 576px)</div>
-                    <div class="tablet-yes">tablet (do 768px)</div>
-                    <div class="desktop-yes">desktop (do 1024px)</div>
-                    <div class="widescreen-yes">widescreen (do 1280px)</div>
-                    <div class="fullhd-yes">fullhd (do 1536px)</div>
-                    <div class="mega-yes">mega (nad 1536px)</div>
-                </div>
+                <script>
+                    function updateWidth() {
+                        const width = window.innerWidth;
+                        let label = "";
+
+                        if (width <= 575) {
+                            label = "mobil (do 575 px)";
+                        } else if (width >= 576 && width <= 767) {
+                            label = "tablet (576–767 px)";
+                        } else if (width >= 768 && width <= 1023) {
+                            label = "desktop (768–1023 px)";
+                        } else if (width >= 1024 && width <= 1279) {
+                            label = "widescreen (1024–1279 px)";
+                        } else if (width >= 1280 && width <= 1535) {
+                            label = "fullhd (1280–1535 px)";
+                        } else {
+                            label = "mega (1536 px a víc)";
+                        }
+
+                        document.getElementById("viewport-width").textContent =
+                            `Framework pracuje s pěti breakpointy. Tvoje aktuální šířka viewportu je ${width}px – ${label}.`;
+                    }
+
+                    window.addEventListener("resize", updateWidth);
+                    updateWidth(); // inicializace při načtení
+                </script>
+
+                <p>
+                    <span class="fromtablet">fromtablet</span><br />
+                    <span class="fromtablet todesktop"
+                        >fromtablet todesktop</span
+                    ><br />
+                    <span class="todesktop">todesktop</span>
+                </p>
+
+                <p>
+                    Pro zobrazení prvku na určitém vewortu využíváme třídy
+                    začínající <code>.to</code> nebo <code>.from</code>:
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Viewport</th>
+                            <th>.tomobile</th>
+                            <th>.totablet</th>
+                            <th>.todesktop</th>
+                            <th>.towidescreen</th>
+                            <th>.tofullhd</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mobil (do 575 px)</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                        </tr>
+                        <tr>
+                            <td>tablet (od 576 px do 767 px)</td>
+                            <td></td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                        </tr>
+                        <tr>
+                            <td>desktop (od 768 px do 1023 px)</td>
+                            <td></td>
+                            <td></td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                        </tr>
+                        <tr>
+                            <td>widescreen (od 1024 px do 1279 px)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                        </tr>
+                        <tr>
+                            <td>fullhd (od 1280 px do 1535 px)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>ANO</td>
+                        </tr>
+                        <tr>
+                            <td>mega (od 1536 px dále)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Viewport</th>
+                            <th>.fromtablet</th>
+                            <th>.fromdesktop</th>
+                            <th>.fromwidescreen</th>
+                            <th>.fromfullhd</th>
+                            <th>.frommega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mobil (do 575 px)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>tablet (od 576 px do 767 px)</td>
+                            <td>ANO</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>desktop (od 768 px do 1023 px)</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>widescreen (od 1024 px do 1279 px)</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>fullhd (od 1280 px do 1535 px)</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>mega (od 1536 px dále)</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                            <td>ANO</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Pro úpravu zobrazení používáme několik druhů tříd.
+                    Nejjednodušší jsou třídy typu <code>.desktop-yes</code> –
+                    daný element zobrazí pouze pro viewport desktop a nižší.
+                </p>
+
+                <p>
+                    Dále používáme třídy typu <code>.todesktop</code> – zobrazí
+                    se od mobilu po desktop (včetně).
+                </p>
 
                 <h2 id="elementy">Elementy</h2>
 

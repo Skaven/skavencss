@@ -125,6 +125,9 @@ body {
     .tablet-yes {
         display: flex;
     }
+    .tomobile {
+        display: none;
+    }
 }
 /* desktop */
 @media (min-width: 768px) {
@@ -132,7 +135,7 @@ body {
         display: flex;
     }
     .totablet {
-        display: none !important; /* zobrazí se od mobilu po tablet (včetně) nahoru */
+        display: none !important; /* zobrazí se od mobilu po tablet (včetně) */
     }
 }
 /* widescreen */
@@ -141,13 +144,16 @@ body {
         display: flex;
     }
     .todesktop {
-        display: none !important; /* zobrazí se od mobilu po desktop (včetně) nahoru */
+        display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
     }
 }
 /* fullhd */
 @media (min-width: 1280px) {
     .fullhd-yes {
         display: flex;
+    }
+    .towidescreen {
+        display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
     }
 }
 /* mega */
@@ -157,6 +163,9 @@ body {
     }
     .mega-yes {
         display: flex;
+    }
+    .tofullhd {
+        display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
     }
 }
 
@@ -1439,6 +1448,9 @@ textarea {
     .mobile > .item {
         width: 100%;
     }
+    .fromtablet {
+        display: none !important; /* zobrazí se od tabletu (včetně) nahoru */
+    }
 }
 
 @media (max-width: 765px) {
@@ -1449,8 +1461,8 @@ textarea {
     .tablet > .item {
         width: 100%;
     }
-    .fromtablet {
-        display: none !important; /* zobrazí se od tabletu (včetně) nahoru */
+    .fromdesktop {
+        display: none !important; /* zobrazí se od desktopu (včetně) nahoru */
     }
 }
 
@@ -1462,8 +1474,8 @@ textarea {
     .desktop > .item {
         width: 100%;
     }
-    .fromdesktop {
-        display: none !important; /* zobrazí se od desktopu (včetně) nahoru */
+    .fromwidescreen {
+        display: none !important; /* zobrazí se od widescreenu (včetně) nahoru */
     }
 }
 
@@ -1475,8 +1487,14 @@ textarea {
     .widescreen > .item {
         width: 100%;
     }
-    .fromwidescreen {
+    .fromfullhd {
         display: none !important; /* zobrazí se od widescreenu (včetně) nahoru */
+    }
+}
+
+@media (max-width: 1535px) {
+    .frommega {
+        display: none !important; /* zobrazí se od mega (včetně) nahoru */
     }
 }
 
