@@ -18,6 +18,18 @@
     </head>
 
     <body class="">
+        <div
+            class="bb bt"
+            style="display: flex; overflow-x: hidden; width: 100%"
+        >
+            <div style="flex: 0 0 575px" class="bg-light">mobil</div>
+            <div style="flex: 0 0 192px">tablet</div>
+            <div style="flex: 0 0 256px" class="bg-light">desktop</div>
+            <div style="flex: 0 0 256px">widescreen</div>
+            <div style="flex: 0 0 256px" class="bg-light">fullhd</div>
+            <div style="flex: 0 0 2000px">mega</div>
+        </div>
+
         <header>
             <div class="container pt">
                 <div class="row desktop middle">
@@ -105,8 +117,8 @@
 
                         if (width <= 575) {
                             label = "mobil (do 575 px)";
-                        } else if (width >= 576 && width <= 767) {
-                            label = "tablet (576–767 px)";
+                        } else if (width >= 512 && width <= 767) {
+                            label = "tablet (512–767 px)";
                         } else if (width >= 768 && width <= 1023) {
                             label = "desktop (768–1023 px)";
                         } else if (width >= 1024 && width <= 1279) {
@@ -154,7 +166,7 @@
                             <td>ANO</td>
                         </tr>
                         <tr>
-                            <td>tablet (od 576 px do 767 px)</td>
+                            <td>tablet (od 512 px do 767 px)</td>
                             <td></td>
                             <td>ANO</td>
                             <td>ANO</td>
@@ -217,7 +229,7 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td>tablet (od 576 px do 767 px)</td>
+                            <td>tablet (od 512 px do 767 px)</td>
                             <td>ANO</td>
                             <td></td>
                             <td></td>
@@ -973,9 +985,11 @@
                 </p>
 
                 <p>
-                    Je možné růčo měnit jak margin, tak padding a to ve čtyřech
-                    stupních – nula, half, standard a big. Např takto:
-                    <code>.m-0</code>, <code>.m-half</code>, <code>m</code>,
+                    Je možné růčo měnit jak <b>margin</b>, tak <b>padding</b> a
+                    to v pěti stupních – nula, quarter (čtvrtina baseline), half
+                    (polovina baseline), standard a big (dvojnásobek baseline).
+                    Např. takto: <code>.m-0</code>, <code>.m-quarter</code>,
+                    <code>.m-half</code>, <code>m</code>,
                     <code>m-big</code> (pro padding se používá prefix p).
                     Fungují i dílčí třídy jako <code>ml-0</code> nebo
                     <code>px-half</code>.

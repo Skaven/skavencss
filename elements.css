@@ -6,14 +6,14 @@
     --black: hsl(90, 5%, 7%); /* #131412 */
     --white: hsl(0, 0%, 100%); /* #fff */
 
-    --dark-grey: hsl(0, 0%, 46%); /* #757575 */
+    --dark-grey: hsl(0, 0%, 46%); /* #751175 */
     --grey: hsl(0, 0%, 60%); /* #999 */
     --light-grey: hsl(0, 0%, 89%);
     --snow: hsl(0, 0%, 94%); /* #f0f0f0 */
     --light: hsl(0, 0%, 97%); /* #f8f8f8 */
 
     --dark-red: hsl(0, 79%, 56%); /* #eb3b2f */
-    --red: hsl(0, 79%, 63%); /* #eb5757 */
+    --red: hsl(0, 79%, 63%); /* #eb5117 */
     --light-red: hsl(0, 79%, 90%); /* #fbe4e4 */
 
     --dark-blue: hsl(208, 100%, 36%); /* #005bb5 */
@@ -113,7 +113,7 @@ body {
 }
 
 /* tablet */
-@media (min-width: 576px) {
+@media (min-width: 512px) {
     .tomobile {
         display: none;
     }
@@ -807,8 +807,17 @@ progress::-moz-progress-bar {
 .mb-0 {
     margin-bottom: 0 !important;
 }
+.m-quarter {
+    margin: calc(var(--baseline) / 4) !important;
+}
+.mt-quarter {
+    margin-top: calc(var(--baseline) / 4) !important;
+}
 .mr-quarter {
     margin-right: calc(var(--baseline) / 4) !important;
+}
+.mb-quarter {
+    margin-bottom: calc(var(--baseline) / 4) !important;
 }
 .ml-quarter {
     margin-left: calc(var(--baseline) / 4) !important;
@@ -1417,7 +1426,7 @@ textarea {
     flex: 1; /* aplikuješ na item, který se roztáhne */
 }
 
-@media (max-width: 575px) {
+@media (max-width: 511px) {
     .mobile {
         flex-direction: column; /* pod sebou na mobilu */
         /* gap: 0; */
@@ -1558,7 +1567,7 @@ textarea {
 }
 
 /* Na tabletu: 3 prvky */
-@media (min-width: 576px) {
+@media (min-width: 512px) {
     .layout > .item {
         flex: 0 0 calc(33.33% - calc(var(--baseline) * 2 / 3)) !important;
         width: calc(33.33% - calc(var(--baseline) * 2 / 3));
