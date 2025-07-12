@@ -112,46 +112,26 @@ body {
     padding: 0 var(--baseline);
 }
 
-.tablet-yes,
-.desktop-yes,
-.widescreen-yes,
-.fullhd-yes,
-.mega-yes {
-    display: none;
-}
-
 /* tablet */
 @media (min-width: 576px) {
-    .tablet-yes {
-        display: flex;
-    }
     .tomobile {
         display: none;
     }
 }
 /* desktop */
 @media (min-width: 768px) {
-    .desktop-yes {
-        display: flex;
-    }
     .totablet {
         display: none !important; /* zobrazí se od mobilu po tablet (včetně) */
     }
 }
 /* widescreen */
 @media (min-width: 1024px) {
-    .widescreen-yes {
-        display: flex;
-    }
     .todesktop {
         display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
     }
 }
 /* fullhd */
 @media (min-width: 1280px) {
-    .fullhd-yes {
-        display: flex;
-    }
     .towidescreen {
         display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
     }
@@ -160,9 +140,6 @@ body {
 @media (min-width: 1536px) {
     .container {
         max-width: calc(1536px - 2 * var(--baseline));
-    }
-    .mega-yes {
-        display: flex;
     }
     .tofullhd {
         display: none !important; /* zobrazí se od mobilu po desktop (včetně) */
@@ -1440,7 +1417,7 @@ textarea {
     flex: 1; /* aplikuješ na item, který se roztáhne */
 }
 
-@media (max-width: 509px) {
+@media (max-width: 575px) {
     .mobile {
         flex-direction: column; /* pod sebou na mobilu */
         /* gap: 0; */
