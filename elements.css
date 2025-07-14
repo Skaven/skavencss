@@ -6,36 +6,39 @@
     --black: hsl(90, 5%, 7%); /* #131412 */
     --white: hsl(0, 0%, 100%); /* #fff */
 
-    --dark-grey: hsl(0, 0%, 46%); /* #751175 */
-    --grey: hsl(0, 0%, 60%); /* #999 */
-    --light-grey: hsl(0, 0%, 89%);
+    --dark-grey: hsl(0, 0%, 34%); /* #575757 */
+    --grey: hsl(0, 0%, 46%); /* #757575 */
+    --light-grey: hsl(0, 0%, 89%); /* #E3E3E3 */
     --snow: hsl(0, 0%, 94%); /* #f0f0f0 */
     --light: hsl(0, 0%, 97%); /* #f8f8f8 */
 
-    --dark-red: hsl(0, 79%, 56%); /* #eb3b2f */
-    --red: hsl(0, 79%, 63%); /* #eb5117 */
-    --light-red: hsl(0, 79%, 90%); /* #fbe4e4 */
+    --dark-red: hsl(0, 79%, 42%); /* #BF1717 */
+    --red: hsl(0, 79%, 52%); /* #E52424 */
+    --light-red: hsl(0, 79%, 90%); /* #FAD1D1 */
 
-    --dark-blue: hsl(208, 100%, 36%); /* #005bb5 */
-    --blue: hsl(208, 100%, 43%); /* #0077dd */
+    --dark-blue: hsl(208, 100%, 32%); /* #005bb5 */
+    --blue: hsl(208, 100%, 43%); /* #0076DB */
     --light-blue: hsl(208, 100%, 90%); /* #d3ebff */
 
     --dark-orange: hsl(37, 91%, 48%); /* #a16607 */
-    --orange: hsl(37, 91%, 55%); /* #f5a524 */
+    --orange: hsl(
+        37,
+        91%,
+        55%
+    ); /* #f5a524 -> AA kontrast má až hsl(37, 91%, 34%) což je prakticky hnědá */
     --light-orange: hsl(37, 91%, 90%); /* #fce8c6 */
 
-    --dark-green: hsl(80, 100%, 23%); /* #4d7400 */ /* zachováno */
-    --green: hsl(80, 87%, 30%); /* #618d0a */ /* zachováno */
+    --dark-green: hsl(80, 87%, 20%); /* #425F07 */
+    --green: hsl(80, 87%, 27%); /* #588109 */
     --light-green: hsl(80, 87%, 80%); /* #c9f570 */
-    /*--light-green: hsl(80, 100%, 90%); /* #c9f570 */
 
     --dark-yellow: hsl(50, 100%, 44%); /* #ccaa06 */
     --yellow: hsl(50, 100%, 52%); /* #ffd508 */
     --light-yellow: hsl(50, 100%, 90%); /* #ffdd39 */
 
-    --dark-violet: hsl(270, 87%, 30%);
-    --violet: hsl(270, 87%, 40%);
-    --light-violet: hsl(270, 87%, 85%);
+    --dark-violet: hsl(270, 87%, 47%);
+    --violet: hsl(270, 87%, 61%);
+    --light-violet: hsl(270, 87%, 90%);
 
     /* přiřazení barev */
     --body-color: var(--black); /* barva textu */
@@ -360,7 +363,7 @@ a.tag:hover {
     background: var(--light-red);
 }
 .tag.black {
-    color: var(--white);
+    color: var(--white) !important;
     background: var(--black);
 }
 .tag.orange {
@@ -374,6 +377,10 @@ a.tag:hover {
 .tag.green {
     color: var(--black);
     background: var(--light-green);
+}
+.tag.violet {
+    color: var(--black);
+    background: var(--light-violet);
 }
 
 .badge {
@@ -764,7 +771,7 @@ progress::-moz-progress-bar {
 /* Třídy na výšku a šířku */
 
 .fullwidth {
-    width: 100% !important; /* asi do hlavniho frameworku */
+    width: 100% !important;
 }
 .h1 {
     height: var(--baseline);
@@ -1085,6 +1092,16 @@ button.orange,
 button.orange:hover,
 .button.orange:hover {
     background-color: var(--dark-orange);
+}
+button.violet,
+.button.violet {
+    background-color: var(--violet);
+    border: 1px solid var(--violet);
+    color: var(--white);
+}
+button.violet:hover,
+.button.violet:hover {
+    background-color: var(--dark-violet);
 }
 
 button.pseudo,

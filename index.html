@@ -22,8 +22,8 @@
             class="bb bt"
             style="display: flex; overflow-x: hidden; width: 100%"
         >
-            <div style="flex: 0 0 575px" class="bg-light">mobil</div>
-            <div style="flex: 0 0 192px">tablet</div>
+            <div style="flex: 0 0 511px" class="bg-light">mobil</div>
+            <div style="flex: 0 0 256px">tablet</div>
             <div style="flex: 0 0 256px" class="bg-light">desktop</div>
             <div style="flex: 0 0 256px">widescreen</div>
             <div style="flex: 0 0 256px" class="bg-light">fullhd</div>
@@ -404,25 +404,128 @@
                         <abbr title="Cascading Style Sheets">CSS</abbr>.
                     </p>
 
-                    <h3>Barvy textu</h3>
+                    <h3>Barvy</h3>
+
+                    <p>
+                        Framework má v rámci CSS proměnných definované základní
+                        barvy včetně jejich světlého a tmavého odstínu. Definuje
+                        se taky <b>primary</b> barva, která se používá u primary
+                        tlačítek. Třídy jsou nastaveny tak, aby byl zachován AA
+                        kontrast podle
+                        <a href="https://color.review" target="_blank"
+                            >color.review</a
+                        >
+                        – vyjímku tvoří žlutá a oranžová, kde to zkrátka není
+                        možné. Světlá barva se používá na pozadí, klasická barva
+                        na text, tmavá barva na hover efekty.
+                    </p>
 
                     <p>
                         Framework má definované některé základní barvy, jsou to
                         třeba <code>.grey</code>, <code>.red</code> nebo
-                        <code>.blue</code>. Pro změnu pozadí se používá prefix
-                        <code>bg</code>, takže např. <code>.bg-grey</code>. V
-                        rámci CSS proměnných je definovaná <b>primary</b> barva,
-                        která se používá u tlačítek. Každá základní marva má
-                        navíc světlou a tmavou variantu.
+                        <code>.blue</code>.
                     </p>
 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ukázka</th>
+                                <th>Štítek</th>
+                                <th>Tlačítko</th>
+                                <th>Název třídy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="black">černá</span></td>
+                                <td>
+                                    <span class="tag black big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="black mb-0">tlačítko</button>
+                                </td>
+                                <td><code>.black</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="blue">modrá</span></td>
+                                <td>
+                                    <span class="tag blue big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="blue mb-0">tlačítko</button>
+                                </td>
+                                <td><code>.blue</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="green">zelená</span></td>
+                                <td>
+                                    <span class="tag green big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="green mb-0">tlačítko</button>
+                                </td>
+                                <td><code>.green</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="red">červená</span></td>
+                                <td><span class="tag red big">štítek</span></td>
+                                <td>
+                                    <button class="red mb-0">tlačítko</button>
+                                </td>
+                                <td><code>.red</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="grey">šedá</span></td>
+                                <td>
+                                    <span class="tag grey big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="grey mb-0">tlačítko</button>
+                                </td>
+                                <td><code>.grey</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="orange">oranžová</span></td>
+                                <td>
+                                    <span class="tag orange big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="orange mb-0">
+                                        tlačítko
+                                    </button>
+                                </td>
+                                <td><code>.orange</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="yellow">žlutá</span></td>
+                                <td>
+                                    <span class="tag yellow big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="yellow mb-0">
+                                        tlačítko
+                                    </button>
+                                </td>
+                                <td><code>.yellow</code></td>
+                            </tr>
+                            <tr>
+                                <td><span class="violet">fialová</span></td>
+                                <td>
+                                    <span class="tag violet big">štítek</span>
+                                </td>
+                                <td>
+                                    <button class="violet mb-0">
+                                        tlačítko
+                                    </button>
+                                </td>
+                                <td><code>.violet</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <p>
-                        <span class="blue">modrá</span>,
-                        <span class="green">zelená</span>,
-                        <span class="red">červená</span>,
-                        <span class="grey">šedá</span>,
-                        <span class="orange">oranžová</span>,
-                        <span class="yellow">žlutá</span>
+                        Pro změnu pozadí se používá prefix
+                        <code>bg</code>, takže např. <code>.bg-grey</code>.
                     </p>
                 </section>
 
