@@ -24,9 +24,13 @@
     --orange: hsl(37, 91%, 55%); /* #f5a524 */
     --light-orange: hsl(37, 91%, 90%); /* #fce8c6 */
 
-    --dark-green: hsl(80, 100%, 19%); /* #425F07 */
-    --green: hsl(80, 100%, 25%); /* #558000 */
-    --light-green: hsl(80, 100%, 80%); /* #c9f570 */
+    /* --dark-green: hsl(80, 100%, 19%); /* #425F07 */
+    /* --green: hsl(80, 100%, 25%); /* #558000 */
+    /* --light-green: hsl(80, 100%, 80%); /* #c9f570 */
+
+    --dark-green: hsl(80, 100%, 20%); /* #425F07 */
+    --green: hsl(80, 87%, 27%); /* #558000 */
+    --light-green: hsl(80, 87%, 80%); /* #c9f570 */
 
     --dark-yellow: hsl(50, 100%, 44%); /* #ccaa06 */
     --yellow: hsl(50, 100%, 52%); /* #ffd508 */
