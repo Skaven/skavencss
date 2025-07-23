@@ -24,10 +24,6 @@
     --orange: hsl(37, 91%, 55%); /* #f5a524 */
     --light-orange: hsl(37, 91%, 90%); /* #fce8c6 */
 
-    /* --dark-green: hsl(80, 100%, 19%); /* #416100 */
-    /* --green: hsl(80, 100%, 25%); /* #558000 */
-    /* --light-green: hsl(80, 100%, 80%); /* #DDFF99 */
-
     --dark-green: hsl(80, 87%, 20%); /* #425F07 */
     --green: hsl(80, 87%, 27%); /* #598109 */
     --light-green: hsl(80, 87%, 80%); /* #DBF8A0 */
@@ -458,6 +454,9 @@ p {
 }
 .bg-black {
     background-color: var(--black) !important;
+}
+.bg-red {
+    background-color: var(--light-red) !important;
 }
 
 /* dělící čára */
