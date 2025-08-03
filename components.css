@@ -406,7 +406,6 @@ summary {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-weight: bold;
 }
 summary svg {
     transition: transform 0.2s ease;
@@ -415,12 +414,11 @@ details[open] summary svg {
     transform: rotate(180deg);
 }
 details > div {
-    padding-top: var(--baseline);
+    padding-top: calc(var(--baseline) / 2);
 }
 details {
     border-bottom: 1px solid var(--light-grey);
-    padding: var(--baseline) var(--baseline) calc(var(--baseline) - 1px)
-        var(--baseline);
+    padding: calc(var(--baseline) / 2) 0 calc(var(--baseline) / 2 - 1px) 0;
 }
 
 /* DROPDOWN */
