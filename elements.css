@@ -1419,7 +1419,7 @@ textarea {
     left: calc(var(--baseline) / 6);
     width: calc(var(--baseline) - 8px); /* Velikost kolečka */
     height: calc(var(--baseline) - 8px);
-    border-radius: 50%;
+    border-radius: var(--radius);
     background-color: var(--white);
     transition: left 0.2s ease-in-out;
 }
