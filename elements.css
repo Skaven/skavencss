@@ -1309,6 +1309,10 @@ button:disabled,
 .button:disabled {
     opacity: 0.5 !important;
 }
+input:disabled,
+select:disabled {
+    background-color: var(--light) !important;
+}
 /* file uploader */
 .file {
     margin: 0 0 var(--baseline);
@@ -1393,7 +1397,39 @@ textarea {
     border-radius: var(--radius);
     vertical-align: middle;
 }
-
+/* Toggle button */
+.toggle-checkbox {
+    display: none;
+}
+.toggle-button {
+    display: inline-block;
+    position: relative;
+    width: calc(var(--baseline) * 2); /* Zmenšená šířka */
+    height: var(--baseline); /* Zmenšená výška */
+    border-radius: var(--radius); /* Plně zaoblené rohy */
+    background-color: var(--grey); /* Neutrální šedá pro vypnutý stav */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+/* Vytvoření kolečka pomocí pseudo-elementu */
+.toggle-button::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--baseline) / 6);
+    left: calc(var(--baseline) / 6);
+    width: calc(var(--baseline) - 8px); /* Velikost kolečka */
+    height: calc(var(--baseline) - 8px);
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: left 0.2s ease-in-out;
+}
+.toggle-checkbox:checked + .toggle-button {
+    background-color: var(--primary); /* Zelená pro zapnutý stav */
+}
+.toggle-checkbox:checked + .toggle-button::after {
+    left: 28px; /* Posunutí = šířka (48) - šířka kolečka (16) - odsazení (4) */
+}
+/* Join input+button*/
 .join {
     display: flex;
     justify-content: flex-start;
