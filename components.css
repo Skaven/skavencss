@@ -267,8 +267,9 @@ ul.tabs.boxed a:hover {
     scroll-snap-align: start;
 }
 .carousel-button {
-    background: rgba(0, 0, 0, 0.15);
-    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+    border: 1px solid var(--light-grey);
     border-radius: 0;
     cursor: pointer;
     position: absolute;
@@ -283,10 +284,9 @@ ul.tabs.boxed a:hover {
     display: none; /* při inicializaci jsou skryté, zobrazí se až díky JS */
     justify-content: center; /* Horizontální zarovnání na střed */
     align-items: center; /* Vertikální zarovnání na střed */
-    color: var(--white) !important;
 }
 .carousel-button:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--white);
 }
 .carousel-button.prev {
     left: 0; /* Posunutí od levého okraje */

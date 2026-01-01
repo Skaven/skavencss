@@ -401,6 +401,7 @@ p {
     margin: 0 0 var(--baseline); /* Spodní mezera odpovídá baseline gridu */
     line-height: var(--baseline);
     hyphens: auto !important; /* Zapne rozdělování slov na konci řádku */
+    text-wrap: pretty; /* sirotci, vodvy */
 }
 
 /* barvy */
@@ -424,6 +425,9 @@ p {
 }
 .orange {
     color: var(--orange);
+}
+.dark-orange {
+    color: var(--dark-orange);
 }
 .red {
     color: var(--red);
@@ -1566,13 +1570,11 @@ textarea {
 
 .icon {
     display: inline-flex;
-    width: 1rem;
-    height: 1rem;
+    width: calc(var(--baseline) / 1.2);
+    height: calc(var(--baseline) / 1.2);
     line-height: var(--baseline);
-    justify-content: center;
-    align-items: center;
-    vertical-align: -2px;
-    stroke: currentColor; /* Ikona dědí barvu textu */
+    vertical-align: -4px;
+    /* stroke: currentColor; Ikona dědí barvu textu -> mělo by být zakomponováno v ikoně */
 }
 .icon.big {
     width: calc(var(--baseline) * 2);

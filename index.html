@@ -18,10 +18,7 @@
     </head>
 
     <body class="">
-        <div
-            class="bb bt"
-            style="display: flex; overflow-x: hidden; width: 100%"
-        >
+        <div style="display: flex; overflow-x: hidden; width: 100%">
             <div style="flex: 0 0 511px" class="bg-light">mobil</div>
             <div style="flex: 0 0 256px">tablet</div>
             <div style="flex: 0 0 256px" class="bg-light">desktop</div>
@@ -780,31 +777,54 @@
 
                     <p>
                         Ikony jsou pain. Doporučuju naládovat SVG přímo do textu
-                        a použít třídu <code>.icon</code>. Doporučuju použít
-                        <a href="https://heroicons.com">Heroicons</a>.
+                        a použít třídu <code>.icon</code>. Nejlépe fungují ikony
+                        20x20 px:
+
                         <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
                             xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentitemor"
+                            class="icon"
+                        >
+                            <g clip-path="url(#clip0_19_478)">
+                                <rect width="18" height="18" fill="black" />
+                            </g>
+                        </svg>
+
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
                             class="icon"
                         >
                             <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                                d="M20 3V17H0V3H20ZM2 5V15H18V5H2ZM12 13H8V11H12V13ZM8 11H6V9H8V11ZM14 11H12V9H14V11ZM6 9H4V7H6V9ZM16 9H14V7H16V9Z"
+                                fill="currentColor"
+                                stroke="none"
                             />
                         </svg>
                     </p>
 
-                    <p>
-                        Připraveni jsme i na použítí
-                        <a href="https://fontawesome.com/">Font Awesome</a>.
-                        Postup je klasický – tedy jeden span s třídou
-                        <code>.icon</code> a vnořený span s třídou řezu a
-                        konkrétní ikonky.
-                    </p>
+                    <div class="row full center">
+                        <div class="item">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="icon"
+                            >
+                                <path
+                                    d="M20 3V17H0V3H20ZM2 5V15H18V5H2ZM12 13H8V11H12V13ZM8 11H6V9H8V11ZM14 11H12V9H14V11ZM6 9H4V7H6V9ZM16 9H14V7H16V9Z"
+                                    fill="currentColor"
+                                    stroke="none"
+                                /></svg
+                            ><br />
+                            <small>envelope</small>
+                        </div>
+                    </div>
 
                     <p>
                         Velkou ikonu lze udělat přidáním třídy
