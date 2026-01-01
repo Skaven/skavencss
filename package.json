@@ -1,0 +1,27 @@
+{
+  "name": "skavencss",
+  "version": "1.0.0",
+  "description": "Baseline grid CSS framework 📏",
+  "keywords": [
+    "css"
+  ],
+  "homepage": "https://github.com/skaven/Skavencss#readme",
+  "bugs": {
+    "url": "https://github.com/skaven/Skavencss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/skaven/Skavencss.git"
+  },
+  "license": "MIT",
+  "author": "Skaven",
+  "type": "commonjs",
+  "main": "skaven.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "*.css",
+    "fonts/"
+  ]
+}

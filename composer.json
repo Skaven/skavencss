@@ -1,0 +1,12 @@
+{
+  "name": "skaven/skavencss",
+  "description": "Baseline grid CSS framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Skaven"
+    }
+  ],
+  "require": {}
+}
