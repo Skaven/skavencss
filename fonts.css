@@ -1,25 +1,28 @@
-/* FONTS */
+/* 
+   FONTS 
+   Source: https://github.com/iaolo/iA-Fonts
+*/
 
 @font-face {
     font-family: "iamono";
-    src: url("https://www.skaven.cz/css/fonts/iamono.woff2") format("woff2");
+    src: url("fonts/iamono.woff2") format("woff2");
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro.woff2") format("woff2");
+    src: url("fonts/iaquattro.woff2") format("woff2");
     font-weight: 400;
     font-feature-settings: "ss04"; /* běžná nula */
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro_bold.woff2")
+    src: url("fonts/iaquattro_bold.woff2")
         format("woff2");
     font-weight: 700;
     font-feature-settings: "ss04"; /* běžná nula */
 }
 @font-face {
     font-family: "iaquatro";
-    src: url("https://www.skaven.cz/css/fonts/iaquattro_italic.woff2")
+    src: url("fonts/iaquattro_italic.woff2")
         format("woff2");
     font-style: italic;
     font-feature-settings: "ss04"; /* běžná nula */
