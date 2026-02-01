@@ -1574,7 +1574,7 @@ textarea {
     height: calc(var(--baseline) / 1.2);
     line-height: var(--baseline);
     vertical-align: -4px;
-    /* stroke: currentColor; Ikona dědí barvu textu -> mělo by být zakomponováno v ikoně */
+    stroke: currentColor;
 }
 .icon.big {
     width: calc(var(--baseline) * 2);
