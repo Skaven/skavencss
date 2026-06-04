@@ -419,6 +419,10 @@ details > div {
 details {
     border-bottom: 1px solid var(--light-grey);
     padding: calc(var(--baseline) / 2) 0 calc(var(--baseline) / 2 - 1px) 0;
+    margin-bottom: var(--baseline);
+}
+details + details {
+    margin-top: calc(-1 * var(--baseline));
 }
 
 /* DROPDOWN */
