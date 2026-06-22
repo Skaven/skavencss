@@ -400,7 +400,13 @@ a.tag:hover {
 p {
     margin: 0 0 var(--baseline); /* Spodní mezera odpovídá baseline gridu */
     line-height: var(--baseline);
+    -webkit-hyphens: auto;
     hyphens: auto !important; /* Zapne rozdělování slov na konci řádku */
+    hyphenate-limit-chars: 6 3 2; /* min. délka slova | před pomlčkou | za pomlčkou */
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 2;
+    -webkit-hyphenate-limit-lines: 2; /* max. 2 řádky za sebou s pomlčkou (Safari) */
+    hyphenate-limit-lines: 2;
     text-wrap: pretty; /* sirotci, vodvy */
 }
 
