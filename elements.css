@@ -304,8 +304,28 @@ code {
     line-height: calc(var(--baseline) * 0.85);
     font-family: var(--mono-font);
 }
-.codeblock {
+
+pre {
+    display: block;
+    margin: 0 0 var(--baseline) 0;
+    padding: calc(var(--baseline) - 1px);
+    background: var(--snow);
+    border-radius: var(--radius);
+    overflow-x: auto;
+    hyphens: none;
+    font-size: 85%;
+    line-height: calc(var(--baseline) * 0.85);
     font-family: var(--mono-font);
+}
+
+pre code {
+    all: unset;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    hyphens: none;
 }
 
 kbd {

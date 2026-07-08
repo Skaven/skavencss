@@ -371,6 +371,11 @@
                             <code>&lt;strong&gt;</code> se chovají tak, jak mají
                         </li>
                         <li>
+                            <code>&lt;code&gt;</code> inline kód a
+                            <code>&lt;pre&gt;&lt;code&gt;</code> bloky kódu mají
+                            monospace font a světlé pozadí
+                        </li>
+                        <li>
                             <code>&lt;table&gt;</code>
                             <code>&lt;tr&gt;</code>
                             <code>&lt;th&gt;</code>
@@ -394,7 +399,18 @@
                         <i>Toto je kurzíva.</i> Můžeš použít i
                         <code>.italic</code>.<br />
                         Takto označíme inline <code>kód</code> pomocí
-                        <code>&lt;code&gt;</code>.<br />
+                        <code>&lt;code&gt;</code>.
+                    </p>
+
+                    <p>
+                        Blok kódu obalíme do
+                        <code>&lt;pre&gt;&lt;code&gt;</code>…<code>&lt;/code&gt;&lt;/pre&gt;</code>:
+                    </p>
+                    <pre><code>function hello() {
+  console.log('world');
+}</code></pre>
+
+                    <p>
                         A tady jsou klávesy kbd – stiskni <kbd>⌘</kbd> +
                         <kbd>Ctrl</kbd> a kopíruj. <br />
                         Text obsahuje zkratku
