@@ -1429,8 +1429,17 @@ textarea {
     vertical-align: middle;
 }
 /* Toggle button */
+/* Skrytý jen vizuálně (ne display: none), aby zůstal fokusovatelný klávesnicí a viditelný pro čtečky */
 .toggle-checkbox {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 .toggle-button {
     display: inline-block;
@@ -1459,6 +1468,9 @@ textarea {
 }
 .toggle-checkbox:checked + .toggle-button::after {
     left: 28px; /* Posunutí = šířka (48) - šířka kolečka (16) - odsazení (4) */
+}
+.toggle-checkbox:focus-visible + .toggle-button {
+    box-shadow: 0 0 0 3px var(--black);
 }
 /* Join input+button*/
 .join {
