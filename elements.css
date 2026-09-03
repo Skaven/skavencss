@@ -1534,7 +1534,7 @@ textarea {
     }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 767px) {
     .tablet {
         flex-direction: column; /* pod sebou na tabletu */
         /* gap: 0; */
