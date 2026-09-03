@@ -1319,18 +1319,23 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
-/* normalizování inputu typu date */
+/* normalizování inputu typu date / month */
 input[type="date"]::-webkit-datetime-edit,
 input[type="date"]::-webkit-datetime-edit-text,
 input[type="date"]::-webkit-datetime-edit-day-field,
 input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-year-field {
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="month"]::-webkit-datetime-edit,
+input[type="month"]::-webkit-datetime-edit-text,
+input[type="month"]::-webkit-datetime-edit-month-field,
+input[type="month"]::-webkit-datetime-edit-year-field {
     margin: 0;
     padding: 0;
     max-height: var(--baseline); /* fix pro chrome */
 }
 /* Skryje výchozí kalendářovou ikonu */
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="month"]::-webkit-calendar-picker-indicator {
     max-height: var(--baseline); /* Skryje ikonu kalendáře */
     margin: 0;
     padding: 0;
