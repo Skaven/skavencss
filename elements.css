@@ -157,7 +157,7 @@ h6 {
     font-family: var(--heading-font); /* Font pro nadpisy */
     margin: 0 0 var(--baseline) 0; /* Spodní mezera odpovídá baseline gridu */
     line-height: var(--baseline);
-    font-weight: var(heading-weight);
+    font-weight: var(--heading-weight);
     color: var(--heading-color); /* barva nadpisů */
 }
 
@@ -875,8 +875,8 @@ progress::-moz-progress-bar {
     margin-left: calc(var(--baseline) / 2) !important;
 }
 .my-half {
-    padding-top: calc(var(--baseline) / 2) !important;
-    padding-bottom: calc(var(--baseline) / 2) !important;
+    margin-top: calc(var(--baseline) / 2) !important;
+    margin-bottom: calc(var(--baseline) / 2) !important;
 }
 .m {
     margin: var(--baseline) !important;

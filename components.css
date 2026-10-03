@@ -58,7 +58,7 @@ ul.tabs.boxed a {
     border-start-start-radius: var(--radius);
 }
 ul.tabs.boxed a:hover {
-    background-color: var(--smoke);
+    background-color: var(--light);
     border-bottom-color: var(--light-grey);
 }
 
@@ -185,7 +185,7 @@ ul.tabs.boxed a:hover {
     border-radius: var(--radius);
 }
 .menu-list a:hover {
-    background: var(--smoke);
+    background: var(--light);
 }
 .menu-list li {
     padding: 0;
