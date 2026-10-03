@@ -32,10 +32,10 @@ Structure your page using semantic tags like `<header>`, `<main>`, and `<footer>
 
 ## 📱 Breakpoints & Responsiveness
 
-The framework uses five distinct breakpoints to handle various screen sizes:
+The framework uses six distinct breakpoints to handle various screen sizes:
 
-1. **Mobile**: up to 575 px
-2. **Tablet**: 576 px – 767 px
+1. **Mobile**: up to 511 px
+2. **Tablet**: 512 px – 767 px
 3. **Desktop**: 768 px – 1023 px
 4. **Widescreen**: 1024 px – 1279 px
 5. **FullHD**: 1280 px – 1535 px

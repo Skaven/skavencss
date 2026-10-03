@@ -112,8 +112,8 @@
                         const width = window.innerWidth;
                         let label = "";
 
-                        if (width <= 575) {
-                            label = "mobil (do 575 px)";
+                        if (width <= 511) {
+                            label = "mobil (do 511 px)";
                         } else if (width >= 512 && width <= 767) {
                             label = "tablet (512–767 px)";
                         } else if (width >= 768 && width <= 1023) {
@@ -127,7 +127,7 @@
                         }
 
                         document.getElementById("viewport-width").textContent =
-                            `Framework pracuje s pěti breakpointy. Tvoje aktuální šířka viewportu je ${width}px – ${label}.`;
+                            `Framework pracuje se šesti breakpointy. Tvoje aktuální šířka viewportu je ${width}px – ${label}.`;
                     }
 
                     window.addEventListener("resize", updateWidth);
@@ -155,7 +155,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>mobil (do 575 px)</td>
+                            <td>mobil (do 511 px)</td>
                             <td>ANO</td>
                             <td>ANO</td>
                             <td>ANO</td>
@@ -218,7 +218,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>mobil (do 575 px)</td>
+                            <td>mobil (do 511 px)</td>
                             <td></td>
                             <td></td>
                             <td></td>
