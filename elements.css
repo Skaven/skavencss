@@ -413,10 +413,6 @@ a.tag:hover {
     -webkit-font-smoothing: auto;
 }
 
-::selection {
-    background-color: var(--snow); /* toto určuje barvu textového výběru */
-}
-
 p {
     margin: 0 0 var(--baseline); /* Spodní mezera odpovídá baseline gridu */
     line-height: var(--baseline);
